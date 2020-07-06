@@ -1,31 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Cason&#39;s Server</title>
+    <title>Categories on Cason Blog</title>
     <link>https://yang-lin94.github.io/categories/</link>
-    <description>Recent content in Categories on Cason&#39;s Server</description>
+    <description>Recent content in Categories on Cason Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <language>zh-Hant-TW</language>
+    <lastBuildDate>Wed, 29 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://yang-lin94.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>syntax</title>
-      <link>https://yang-lin94.github.io/categories/syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Releases</title>
+      <link>https://yang-lin94.github.io/categories/releases/</link>
+      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://yang-lin94.github.io/categories/syntax/</guid>
+      <guid>https://yang-lin94.github.io/categories/releases/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>themes</title>
-      <link>https://yang-lin94.github.io/categories/themes/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>blog</title>
+      <link>https://yang-lin94.github.io/categories/blog/</link>
+      <pubDate>Mon, 24 Jul 2017 18:36:00 +0200</pubDate>
       
-      <guid>https://yang-lin94.github.io/categories/themes/</guid>
+      <guid>https://yang-lin94.github.io/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Uncategorized</title>
+      <link>https://yang-lin94.github.io/categories/uncategorized/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yang-lin94.github.io/categories/uncategorized/</guid>
       <description></description>
     </item>
     

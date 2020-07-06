@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noodp" /> 
+    <meta name="author" content="Cason Yang">     
+    <link rel="next" href="https://yang-lin94.github.io/2017/0.45.1-relnotes/" />
+    <link rel="canonical" href="https://yang-lin94.github.io/2017/http2-server-push-in-hugo/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>
+          HTTP/2 Server Push in Hugo | Cason Blog 
+    </title>
+    <meta name="title" content="HTTP/2 Server Push in Hugo | Cason Blog">   
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/yang-lin94.github.io"
+    },
+    "articleSection" : "posts",
+    "name" : "HTTP\/2 Server Push in Hugo",
+    "headline" : "HTTP\/2 Server Push in Hugo",
+    "description" : "As every page in Hugo can be output to multiple formats, it is easy to create Netlify\u0027s _redirects and _headers files on the fly.\n",
+    "inLanguage" : "zh-Hant-TW",
+    "author" : "bep",
+    "creator" : "bep",
+    "publisher": "bep",
+    "accountablePerson" : "bep",
+    "copyrightHolder" : "bep",
+    "copyrightYear" : "2017",
+    "datePublished": "2017-07-24 18:36:00 \u002b0200 \u002b0200",
+    "dateModified" : "2017-07-24 18:36:00 \u002b0200 \u002b0200",
+    "url" : "https:\/\/yang-lin94.github.io\/2017\/http2-server-push-in-hugo\/",
+    "wordCount" : "285",
+    "keywords" : [  "Cason Blog"]
+}
+</script>
+
+</head>
+  
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+            <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://yang-lin94.github.io">Cason Blog</a>
+        </div>
+        <div class="menu navbar-right">
+             
+            <a class="menu-item" href="/posts/" title="">Blog</a> 
+            <a class="menu-item" href="/categories/" title="">Categories</a> 
+            <a class="menu-item" href="/tags/" title="">Tags</a> 
+            <a class="menu-item" href="/about/" title="About me">About me</a> 
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    <div class="container">
+        <div class="navbar-header">
+            <div> <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://yang-lin94.github.io">Cason Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <div class="menu" id="mobile-menu">
+             
+            <a class="menu-item" href="/posts/" title="">Blog</a> 
+            <a class="menu-item" href="/categories/" title="">Categories</a> 
+            <a class="menu-item" href="/tags/" title="">Tags</a> 
+            <a class="menu-item" href="/about/" title="About me">About me</a> 
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">HTTP/2 Server Push in Hugo</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://yang-lin94.github.io" rel="author">bep</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2017-07-24 itemprop="datePublished">July 24, 2017</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://yang-lin94.github.io/categories/blog/"> blog </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p><strong>Netlify</strong> recently announced support for <a href="https://www.netlify.com/blog/2017/07/18/http/2-server-push-on-netlify/">HTTP/2 server push</a>, and we have now added it to the <strong>gohugo.io</strong> sites for the main <code>CSS</code> and <code>JS</code> bundles, along with server-side 301 redirect support.</p>
+<p>If you navigate to <a href="https://gohugo.io">https://gohugo.io</a> and look in the Chrome developer network console, you should now see <code>Push</code> as the new source (&ldquo;Initiator&rdquo;) for the <code>CSS</code> and <code>JSS</code>:</p>
+<p><strong>Setting up this in Hugo was easy:</strong></p>
+<h2 id="1-configure-netlify-output-formats">1. Configure Netlify Output Formats</h2>
+<p>Add a new custom media type and two new output formats to <code>config.toml</code>. For more on output formats in Hugo, see <a href="/templates/output-formats/">Custom Output Formats</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>outputs<span style="color:#f92672">]</span>
+home <span style="color:#f92672">=</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;REDIR&#34;</span>, <span style="color:#e6db74">&#34;HEADERS&#34;</span> <span style="color:#f92672">]</span>
+
+<span style="color:#f92672">[</span>mediaTypes<span style="color:#f92672">]</span>
+<span style="color:#f92672">[</span>mediaTypes.<span style="color:#e6db74">&#34;text/netlify&#34;</span><span style="color:#f92672">]</span>
+suffix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+delimiter <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+
+<span style="color:#f92672">[</span>outputFormats<span style="color:#f92672">]</span>
+<span style="color:#f92672">[</span>outputFormats.REDIR<span style="color:#f92672">]</span>
+mediatype <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;text/netlify&#34;</span>
+baseName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;_redirects&#34;</span>
+isPlainText <span style="color:#f92672">=</span> true
+notAlternative <span style="color:#f92672">=</span> true
+<span style="color:#f92672">[</span>outputFormats.HEADERS<span style="color:#f92672">]</span>
+mediatype <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;text/netlify&#34;</span>
+baseName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;_headers&#34;</span>
+isPlainText <span style="color:#f92672">=</span> true
+notAlternative <span style="color:#f92672">=</span> true
+</code></pre></div><h2 id="2-add-template-for-the-_headers-file">2. Add Template For the _headers File</h2>
+<p>Add <code>layouts/index.headers</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode<span style="color:#f92672">=</span>block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: origin-when-cross-origin
+*/
+  Link: &lt;<span style="color:#f92672">{{</span> <span style="color:#e6db74">&#34;dist/app.bundle.js&#34;</span> | relURL <span style="color:#f92672">}}</span>&gt;; rel<span style="color:#f92672">=</span>preload; as<span style="color:#f92672">=</span>script
+  Link: &lt;<span style="color:#f92672">{{</span> <span style="color:#e6db74">&#34;dist/main.css&#34;</span> | relURL <span style="color:#f92672">}}</span>&gt;; rel<span style="color:#f92672">=</span>preload; as<span style="color:#f92672">=</span>style
+</code></pre></div><p>The template above creates both a security header definition and a HTTP/2 server push configuration.</p>
+<p>Also note that this is a template for the home page, so the full <code>Page</code> with its <code>Site</code> and many variables are available. You can also use <code>partial</code> to include other templates.</p>
+<h2 id="3-add-template-for-the-_redirects-file">3. Add Template For the _redirects File</h2>
+<p>Add <code>layouts/index.redir</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Netlify redirects. See https://www.netlify.com/docs/redirects/</span>
+<span style="color:#f92672">{{</span>  range $p :<span style="color:#f92672">=</span> .Site.Pages -<span style="color:#f92672">}}</span>
+<span style="color:#f92672">{{</span> range .Aliases <span style="color:#f92672">}}</span>
+<span style="color:#f92672">{{</span>  . | printf <span style="color:#e6db74">&#34;%-35s&#34;</span> <span style="color:#f92672">}}</span>	<span style="color:#f92672">{{</span> $p.RelPermalink -<span style="color:#f92672">}}</span>
+<span style="color:#f92672">{{</span> end -<span style="color:#f92672">}}</span>
+<span style="color:#f92672">{{</span>- end -<span style="color:#f92672">}}</span>
+</code></pre></div><p>The template above creates 301 redirects for your <a href="/content-management/urls/#aliases">aliases</a>, so you will probably want to turn off aliases in your <code>config.toml</code>: <code>disableAliases = true</code>.</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Cason Yang </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://yang-lin94.github.io/2017/http2-server-push-in-hugo/>https://yang-lin94.github.io/2017/http2-server-push-in-hugo/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">本文采用知識共享署名-非商業性使用 4.0 國際許可協議進行許可</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://yang-lin94.github.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+         
+        
+        <a href="https://yang-lin94.github.io/2017/0.45.1-relnotes/" class="next" rel="next" title="Hugo 0.45.1: Two Bug Fixes">Hugo 0.45.1: Two Bug Fixes&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy; 
+        <span itemprop="copyrightYear">2020 - 2020</span> 
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i>
+         </span> 
+        <span class="author" itemprop="copyrightHolder"><a href="https://yang-lin94.github.io">Cason Yang</a> </span> 
+
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
