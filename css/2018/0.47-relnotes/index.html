@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noodp" /> 
+    <meta name="author" content="Cason Yang">    
+    <link rel="prev" href="https://yang-lin94.github.io/2018/0.46-relnotes/" /> 
+    <link rel="next" href="https://yang-lin94.github.io/2018/0.47.1-relnotes/" />
+    <link rel="canonical" href="https://yang-lin94.github.io/2018/0.47-relnotes/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>
+          Output Minification, Live-Reload Fixes and More | Cason Blog 
+    </title>
+    <meta name="title" content="Output Minification, Live-Reload Fixes and More | Cason Blog">   
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/yang-lin94.github.io"
+    },
+    "articleSection" : "posts",
+    "name" : "Output Minification, Live-Reload Fixes and More",
+    "headline" : "Output Minification, Live-Reload Fixes and More",
+    "description" : "Hugo 0.47: Adds minification of rendered output, but is mostly a massive bug fix release.",
+    "inLanguage" : "zh-Hant-TW",
+    "author" : "Cason Yang",
+    "creator" : "Cason Yang",
+    "publisher": "Cason Yang",
+    "accountablePerson" : "Cason Yang",
+    "copyrightHolder" : "Cason Yang",
+    "copyrightYear" : "2018",
+    "datePublished": "2018-08-17 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2018-08-17 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/yang-lin94.github.io\/2018\/0.47-relnotes\/",
+    "wordCount" : "456",
+    "keywords" : [  "Cason Blog"]
+}
+</script>
+
+</head>
+  
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+            <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://yang-lin94.github.io">Cason Blog</a>
+        </div>
+        <div class="menu navbar-right">
+             
+            <a class="menu-item" href="/posts/" title="">Blog</a> 
+            <a class="menu-item" href="/categories/" title="">Categories</a> 
+            <a class="menu-item" href="/tags/" title="">Tags</a> 
+            <a class="menu-item" href="/about/" title="About me">About me</a> 
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    <div class="container">
+        <div class="navbar-header">
+            <div> <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://yang-lin94.github.io">Cason Blog</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <div class="menu" id="mobile-menu">
+             
+            <a class="menu-item" href="/posts/" title="">Blog</a> 
+            <a class="menu-item" href="/categories/" title="">Categories</a> 
+            <a class="menu-item" href="/tags/" title="">Tags</a> 
+            <a class="menu-item" href="/about/" title="About me">About me</a> 
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Output Minification, Live-Reload Fixes and More</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://yang-lin94.github.io" rel="author">Cason Yang</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2018-08-17 itemprop="datePublished">August 17, 2018</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://yang-lin94.github.io/categories/releases/"> Releases </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>Hugo <code>0.47</code> is named <strong>Hugo Reloaded</strong>. It adds minification support for the final rendered output (run <code>hugo --minify</code>), but it is mostly a bug fix release. And most notably, it fixes a set of issues with live-reloading/partial rebuilds when running <code>hugo server</code>. Working with bundles should now be a more pleasant experience, to pick one example.</p>
+<p>This release represents <strong>35 contributions by 6 contributors</strong> to the main Hugo code base.
+<a href="https://github.com/bep">@bep</a> leads the Hugo development with a significant amount of contributions, but also a big shoutout to <a href="https://github.com/satotake">@satotake</a>, <a href="https://github.com/anthonyfok">@anthonyfok</a>, and <a href="https://github.com/coliff">@coliff</a> for their ongoing contributions.</p>
+<p>And a big thanks to <a href="https://github.com/digitalcraftsman">@digitalcraftsman</a> and <a href="https://github.com/onedrawingperday">@onedrawingperday</a>  for their relentless work on keeping the themes site in pristine condition and to <a href="https://github.com/kaushalmodi">@kaushalmodi</a> for his great work on the documentation site.</p>
+<p>Many have also been busy writing and fixing the documentation in <a href="https://github.com/gohugoio/hugoDocs">hugoDocs</a>,
+which has received <strong>21 contributions by 10 contributors</strong>. A special thanks to <a href="https://github.com/bep">@bep</a>, <a href="https://github.com/aapeliv">@aapeliv</a>, <a href="https://github.com/regisphilibert">@regisphilibert</a>, and <a href="https://github.com/brentybh">@brentybh</a> for their work on the documentation site.</p>
+<p>Hugo now has:</p>
+<ul>
+<li>27980+ <a href="https://github.com/gohugoio/hugo/stargazers">stars</a></li>
+<li>442+ <a href="https://github.com/gohugoio/hugo/graphs/contributors">contributors</a></li>
+<li>251+ <a href="http://themes.gohugo.io/">themes</a></li>
+</ul>
+<h2 id="enhancements">Enhancements</h2>
+<h3 id="templates">Templates</h3>
+<ul>
+<li>Suppress blank lines from opengraph internal template <a href="https://github.com/gohugoio/hugo/commit/c09ee78fd235599d3fb794110cd75c024d80cfca">c09ee78f</a> <a href="https://github.com/anthonyfok">@anthonyfok</a></li>
+<li>Add MIME type to embedded JS <a href="https://github.com/gohugoio/hugo/commit/755d1ffe7a22d8ad83485240ff78cf25d501602f">755d1ffe</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5042">#5042</a></li>
+<li>Add <code>os.Stat</code> template function <a href="https://github.com/gohugoio/hugo/commit/d71120852a8e14d0ea4d24de269fce041ef7b666">d7112085</a> <a href="https://github.com/satotake">@satotake</a></li>
+</ul>
+<h3 id="output">Output</h3>
+<ul>
+<li>Add support for minification of final output <a href="https://github.com/gohugoio/hugo/commit/789ef8c639e4621abd36da530bcb5942ac9297da">789ef8c6</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/1251">#1251</a></li>
+</ul>
+<h3 id="other">Other</h3>
+<ul>
+<li>Regenerate CLI docs <a href="https://github.com/gohugoio/hugo/commit/4a16b5f4b0adbb31fee611c378de9d5526de2f86">4a16b5f4</a> <a href="https://github.com/bep">@bep</a></li>
+<li>Include theme name in version mismatch error <a href="https://github.com/gohugoio/hugo/commit/e5052f4e09b6df590cddf2f8bc2c834fd3af3082">e5052f4e</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5044">#5044</a></li>
+<li>Make the JS minifier matcher less specific <a href="https://github.com/gohugoio/hugo/commit/c81fbf4625ae7cc7dd3a7a526331ddfdf5237cc6">c81fbf46</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5073">#5073</a></li>
+<li>Close file when done <a href="https://github.com/gohugoio/hugo/commit/f6ae436c5878bafeafa0bb2646a2c9b32c9b4380">f6ae436c</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5062">#5062</a></li>
+<li>https links to 3rd party sites <a href="https://github.com/gohugoio/hugo/commit/c2a6741394bc609a663522b245d3d75f0ad17da4">c2a67413</a> <a href="https://github.com/coliff">@coliff</a></li>
+<li>Update alias.go <a href="https://github.com/gohugoio/hugo/commit/06bd0136419ebd6727635716c7023494cc5a8257">06bd0136</a> <a href="https://github.com/coliff">@coliff</a></li>
+<li>Remove test debug <a href="https://github.com/gohugoio/hugo/commit/fb3cb05cc3dfc50370449f622fb0130ba7e0ced2">fb3cb05c</a> <a href="https://github.com/bep">@bep</a></li>
+<li>Update dependencies <a href="https://github.com/gohugoio/hugo/commit/d07882dfb76a65cce79aaa6f27df71279cd30600">d07882df</a> <a href="https://github.com/bep">@bep</a></li>
+<li>Update Chroma <a href="https://github.com/gohugoio/hugo/commit/7f5356717d14079432365974e1424fc4ff5987c9">7f535671</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5025">#5025</a></li>
+<li>Remove alias of os.Stat <a href="https://github.com/gohugoio/hugo/commit/71931b30b1813b146aaa60f5cdab16c0f9ebebdb">71931b30</a> <a href="https://github.com/satotake">@satotake</a></li>
+<li>Renmae FileStat Stat <a href="https://github.com/gohugoio/hugo/commit/d40116e5f941e4734ed3bed69dce8ffe11fc76b2">d40116e5</a> <a href="https://github.com/satotake">@satotake</a></li>
+<li>Reduce allocation in the benchmark itself <a href="https://github.com/gohugoio/hugo/commit/a6b1eb1e9150aa5c1c86fe7424cc4167d6f59a5a">a6b1eb1e</a> <a href="https://github.com/bep">@bep</a></li>
+<li>Simplify the 0 transformer case <a href="https://github.com/gohugoio/hugo/commit/27110133ffca05feae2e11a9ff28a9a00f613350">27110133</a> <a href="https://github.com/bep">@bep</a></li>
+</ul>
+<h2 id="fixes">Fixes</h2>
+<h3 id="templates-1">Templates</h3>
+<ul>
+<li>Fix compiling Amber templates that import other templates <a href="https://github.com/gohugoio/hugo/commit/37438757788d279c839506d54f460b2ab37db164">37438757</a> <a href="https://github.com/Stebalien">@Stebalien</a></li>
+<li>Reimplement the &ldquo;.Params tolower&rdquo; template transformer <a href="https://github.com/gohugoio/hugo/commit/5c5384916e8f954f3ea66148ecceb3732584588e">5c538491</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5068">#5068</a></li>
+</ul>
+<h3 id="output-1">Output</h3>
+<ul>
+<li>Fix Resource output in multihost setups <a href="https://github.com/gohugoio/hugo/commit/78f8475a054a6277d37f13329afd240b00dc9408">78f8475a</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5058">#5058</a></li>
+</ul>
+<h3 id="core">Core</h3>
+<ul>
+<li>Force render of any changed page, even in Fast Render Mode <a href="https://github.com/gohugoio/hugo/commit/2247546017c00201d2ce1232dd5303295451f1cc">22475460</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5083">#5083</a></li>
+<li>Add configFile(s) back to the watch list after REMOVE event <a href="https://github.com/gohugoio/hugo/commit/abc54080ec8c43e8989c081d934b59f0c9570c0b">abc54080</a> <a href="https://github.com/anthonyfok">@anthonyfok</a> <a href="https://github.com/gohugoio/hugo/issues/4701">#4701</a></li>
+<li>Gracefully handle typos in server config when running the server <a href="https://github.com/gohugoio/hugo/commit/a655e00d702dbc20b3961b131b33ab21841b043d">a655e00d</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5081">#5081</a></li>
+<li>Fix shortcode output wrapped in p <a href="https://github.com/gohugoio/hugo/commit/78c99463fdd45c91af9933528d12d36a86dc6482">78c99463</a> <a href="https://github.com/gllera">@gllera</a> <a href="https://github.com/gohugoio/hugo/issues/1642">#1642</a></li>
+<li>Adjust tests for shortcode p-issue <a href="https://github.com/gohugoio/hugo/commit/baa62d0abbbf24a17d0aa800a4bb217f026c49ad">baa62d0a</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/1642">#1642</a></li>
+<li>Fix image cache-clearing for sub-languages <a href="https://github.com/gohugoio/hugo/commit/9d973004f5379cff2adda489566fe40683553c4c">9d973004</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5084">#5084</a></li>
+<li>Fix error when deleting a bundle in server mode <a href="https://github.com/gohugoio/hugo/commit/0a88741fe85f4f7aedc02ed748dfeb8ccc073dbf">0a88741f</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5077">#5077</a></li>
+<li>Fix Related when called from shortcode <a href="https://github.com/gohugoio/hugo/commit/0dd06bdac008aa81ec2e8f29ad8110dac0227011">0dd06bda</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5071">#5071</a></li>
+<li>Use the interface value when doing Related search <a href="https://github.com/gohugoio/hugo/commit/a6f199f7a640161333608b4a843d701f7e182829">a6f199f7</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5071">#5071</a></li>
+<li>Fix GitInfo when multiple content dirs <a href="https://github.com/gohugoio/hugo/commit/2182ecfd34a24521bf0e3c939627a55327eb1e19">2182ecfd</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5054">#5054</a></li>
+<li>Add multiple content dirs to GitInfo test site <a href="https://github.com/gohugoio/hugo/commit/e85833d868a902840c5ed1c90713256153b2548b">e85833d8</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5054">#5054</a></li>
+<li>Fix &ldquo;adding a bundle&rdquo; in server mode <a href="https://github.com/gohugoio/hugo/commit/d139a037d98e4b388687eecb7831758412247c58">d139a037</a> <a href="https://github.com/bep">@bep</a> <a href="https://github.com/gohugoio/hugo/issues/5075">#5075</a></li>
+<li>Fix typo <a href="https://github.com/gohugoio/hugo/commit/c362634b7d8802ea81b0b4341c800a9f78f7cd7c">c362634b</a> <a href="https://github.com/satotake">@satotake</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Cason Yang </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://yang-lin94.github.io/2018/0.47-relnotes/>https://yang-lin94.github.io/2018/0.47-relnotes/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">本文采用知識共享署名-非商業性使用 4.0 國際許可協議進行許可</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://yang-lin94.github.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://yang-lin94.github.io/2018/0.46-relnotes/" class="prev" rel="prev" title="The Summer of Hugo"><i class="iconfont icon-left"></i>&nbsp;The Summer of Hugo</a>
+         
+        
+        <a href="https://yang-lin94.github.io/2018/0.47.1-relnotes/" class="next" rel="next" title="Two Bug Fixes">Two Bug Fixes&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy; 
+        <span itemprop="copyrightYear">2020 - 2020</span> 
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i>
+         </span> 
+        <span class="author" itemprop="copyrightHolder"><a href="https://yang-lin94.github.io">Cason Yang</a> </span> 
+
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
