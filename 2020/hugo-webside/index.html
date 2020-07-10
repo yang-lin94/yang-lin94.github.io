@@ -36,7 +36,7 @@
     "articleSection" : "posts",
     "name" : "Hugo建立部落格\/網站",
     "headline" : "Hugo建立部落格\/網站",
-    "description" : "目錄 Hugo是什麼  Hugo是用go語言開發的靜態網站的生產器 （Static Site Generator ，有快速的架站速度和高靈活性。\n 安裝 Hugo有很多安裝方式，有Windows\/macOS\/Linux，這裡主要介紹Window和macOS的安裝方法，其他安裝方法請直接到官網查詢。\nScoop (Windows) scoop install hugo\rscoop install hugo-extended\rHomebrew (macOS) brew\r建立網站 hugo new site webside\r布置主題 Hugo沒有預設主題需到官網Themes下載。\n使用git下載\ncd wibside\rgit init\rgit submodule add https:\/\/github.com\/liuzc\/LeaveIt.git\r沒有也沒關係，下載LeaveIt Themes後解壓縮。\n編輯config.toml將主題設為LeaveIt 開啟config.toml輸入\ntheme = \u0026quot;LeaveIt\u0026quot;\r也可將LeaveIt檔案裡的exampleSite\/config.toml剪下覆蓋原檔案。\n建立新文章 hugo new posts\/my-first-post.md\r文章會在\/content目錄中\n啟動台 hugo server -D\r Hugo預設port為http:\/\/localhost:1313\/\n 部屬 當網站完成後，產生靜態檔案到public資料夾下並部屬到遠端主機上。\n各平台部署方式參考。",
+    "description" : "目錄  Hugo是什麼 安裝 建立網站 布置主題 編輯config.toml 建立新文章 啟動台 部屬  Hugo是什麼  Hugo是用go語言開發的靜態網站的生產器 （Static Site Generator ，有快速的架站速度和高靈活性。\n 安裝 Hugo有很多安裝方式，有Windows\/macOS\/Linux，這裡主要介紹Window和macOS的安裝方法，其他安裝方法請直接到官網查詢。\nScoop (Windows) scoop install hugo\rscoop install hugo-extended\rHomebrew (macOS) brew\r建立網站 hugo new site webside\r布置主題 Hugo沒有預設主題需到官網Themes下載。\n使用git下載\ncd wibside\rgit init\rgit submodule add https:\/\/github.com\/liuzc\/LeaveIt.git\r沒有也沒關係，下載LeaveIt Themes後解壓縮。\n編輯config.toml將主題設為LeaveIt 開啟config.toml輸入\ntheme = \u0026quot;LeaveIt\u0026quot;\r也可將LeaveIt檔案裡的exampleSite\/config.toml剪下覆蓋原檔案。\n建立新文章 hugo new posts\/my-first-post.md\r文章會在\/content目錄中\n啟動台 hugo server -D\r Hugo預設port為http:\/\/localhost:1313\/\n 部屬 當網站完成後，產生靜態檔案到public資料夾下並部屬到遠端主機上。",
     "inLanguage" : "zh-TW",
     "author" : "Cason Yang",
     "creator" : "Cason Yang",
@@ -47,7 +47,7 @@
     "datePublished": "2020-07-07 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-07-07 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/yang-lin94.github.io\/2020\/hugo-webside\/",
-    "wordCount" : "57",
+    "wordCount" : "65",
     "keywords" : [ "hugo","blog","webside", "Cason Blog"]
 }
 </script>
@@ -140,6 +140,16 @@ if (!doNotTrack) {
 
           <p><img src="/images/hugo-webside/hugo-home.png" alt=""></p>
 <h2 id="目錄">目錄</h2>
+<ul>
+<li><a href="#hugo">Hugo是什麼</a></li>
+<li><a href="#%E5%AE%89%E8%A3%9D">安裝</a></li>
+<li><a href="#%E5%BB%BA%E7%AB%8B%E7%B6%B2%E7%AB%99">建立網站</a></li>
+<li><a href="#%E5%B8%83%E7%BD%AE%E4%B8%BB%E9%A1%8C">布置主題</a></li>
+<li><a href="#%E7%B7%A8%E8%BC%AFconfig.toml%E5%B0%87%E4%B8%BB%E9%A1%8C%E8%A8%AD%E7%82%BALeaveIt">編輯config.toml</a></li>
+<li><a href="#%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%96%87%E7%AB%A0">建立新文章</a></li>
+<li><a href="#%E5%95%9F%E5%8B%95%E5%8F%B0">啟動台</a></li>
+<li><a href="#%E9%83%A8%E5%B1%AC">部屬</a></li>
+</ul>
 <h2 id="hugo是什麼">Hugo是什麼</h2>
 <blockquote>
 <p>Hugo是用go語言開發的靜態網站的生產器 （Static Site Generator ，有快速的架站速度和高靈活性。</p>
