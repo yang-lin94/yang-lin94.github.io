@@ -36,7 +36,7 @@
     "articleSection" : "posts",
     "name" : "Hugo建立部落格\/網站",
     "headline" : "Hugo建立部落格\/網站",
-    "description" : "目錄 介紹 ",
+    "description" : "目錄 Hugo是什麼  Hugo是用go語言開發的靜態網站的生產器 （Static Site Generator ，有快速的架站速度和高靈活性。\n 安裝 Hugo有很多安裝方式，有Windows\/macOS\/Linux，這裡主要介紹Window和macOS的安裝方法，其他安裝方法請直接到官網查詢。\nScoop (Windows) scoop install hugo\rscoop install hugo-extended\rHomebrew (macOS) brew\r建立網站 hugo new site webside\r布置主題 Hugo沒有預設主題需到官網Themes下載。\n使用git下載\ncd wibside\rgit init\rgit submodule add https:\/\/github.com\/liuzc\/LeaveIt.git\r沒有也沒關係，下載LeaveIt Themes後解壓縮。\n編輯config.toml將主題設為LeaveIt 開啟config.toml輸入\ntheme = \u0026quot;LeaveIt\u0026quot;\r也可將LeaveIt檔案裡的exampleSite\/config.toml剪下覆蓋原檔案。\n建立新文章 hugo new posts\/my-first-post.md\r文章會在\/content目錄中\n啟動台 hugo server -D\r Hugo預設port為http:\/\/localhost:1313\/\n 部屬 當網站完成後，產生靜態檔案到public資料夾下並部屬到遠端主機上。\n各平台部署方式參考。",
     "inLanguage" : "zh-TW",
     "author" : "Cason Yang",
     "creator" : "Cason Yang",
@@ -47,7 +47,7 @@
     "datePublished": "2020-07-07 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-07-07 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/yang-lin94.github.io\/2020\/hugo-webside\/",
-    "wordCount" : "2",
+    "wordCount" : "57",
     "keywords" : [ "hugo","blog","webside", "Cason Blog"]
 }
 </script>
@@ -124,6 +124,8 @@ if (!doNotTrack) {
         
 
         
+            
+        
 
         
         
@@ -136,8 +138,43 @@ if (!doNotTrack) {
           
           
 
-          <h2 id="目錄">目錄</h2>
-<h2 id="介紹">介紹</h2>
+          <p><img src="/images/hugo-webside/hugo-home.png" alt=""></p>
+<h2 id="目錄">目錄</h2>
+<h2 id="hugo是什麼">Hugo是什麼</h2>
+<blockquote>
+<p>Hugo是用go語言開發的靜態網站的生產器 （Static Site Generator ，有快速的架站速度和高靈活性。</p>
+</blockquote>
+<h2 id="安裝">安裝</h2>
+<p>Hugo有很多安裝方式，有Windows/macOS/Linux，這裡主要介紹Window和macOS的安裝方法，其他安裝方法請直接到<a href="https://gohugo.io/getting-started/installing" title="hugo官網">官網</a>查詢。</p>
+<h3 id="scoop-windows">Scoop (Windows)</h3>
+<pre><code>scoop install hugo
+scoop install hugo-extended
+</code></pre><h3 id="homebrew-macos">Homebrew (macOS)</h3>
+<pre><code>brew
+</code></pre><h2 id="建立網站">建立網站</h2>
+<pre><code>hugo new site webside
+</code></pre><h2 id="布置主題">布置主題</h2>
+<p>Hugo沒有預設主題需到<a href="https://themes.gohugo.io/">官網Themes</a>下載。</p>
+<p>使用git下載</p>
+<pre><code>cd wibside
+git init
+git submodule add https://github.com/liuzc/LeaveIt.git
+</code></pre><p>沒有也沒關係，下載<a href="https://github.com/liuzc/LeaveIt/archive/master.zip">LeaveIt Themes</a>後解壓縮。</p>
+<h2 id="編輯configtoml將主題設為leaveit">編輯config.toml將主題設為LeaveIt</h2>
+<p>開啟config.toml輸入</p>
+<pre><code>theme = &quot;LeaveIt&quot;
+</code></pre><p>也可將LeaveIt檔案裡的exampleSite/config.toml剪下覆蓋原檔案。</p>
+<h2 id="建立新文章">建立新文章</h2>
+<pre><code>hugo new posts/my-first-post.md
+</code></pre><p>文章會在/content目錄中</p>
+<h2 id="啟動台">啟動台</h2>
+<pre><code>hugo server -D
+</code></pre><blockquote>
+<p>Hugo預設port為http://localhost:1313/</p>
+</blockquote>
+<h2 id="部屬">部屬</h2>
+<p>當網站完成後，產生靜態檔案到<code>public</code>資料夾下並部屬到遠端主機上。</p>
+<p>各平台部署方式<a href="https://gohugo.io/hosting-and-deployment/">參考</a>。</p>
 
           <iframe class="LikeCoin" height="235" src="https://button.like.co/in/embed/cason_yang/button?referrer=https%3a%2f%2fyang-lin94.github.io%2f2020%2fhugo-webside%2f" width="100%" frameborder=0></iframe>
           <div class="alert-warning">
@@ -228,8 +265,9 @@ if (!doNotTrack) {
 
 
     
-    
-    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
     
   
 
