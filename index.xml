@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cason Blog on Cason Blog</title>
+    <title>Cason&#39;s Blog on Cason&#39;s Blog</title>
     <link>https://yang-lin94.github.io/</link>
-    <description>Recent content in Cason Blog on Cason Blog</description>
+    <description>Recent content in Cason&#39;s Blog on Cason&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     <lastBuildDate>Tue, 07 Jul 2020 00:00:00 +0000</lastBuildDate>
@@ -18,7 +18,7 @@
     </item>
     
     <item>
-      <title>About me</title>
+      <title>About</title>
       <link>https://yang-lin94.github.io/about/</link>
       <pubDate>Thu, 04 Sep 2003 00:00:00 +0000</pubDate>
       
