@@ -19,15 +19,14 @@
       <guid>https://yang-lin94.github.io/2020/hugo-webside/</guid>
       <description>目錄  Hugo是什麼 安裝 建立網站 布置主題 編輯config.toml 建立新文章 啟動台 部屬  Hugo是什麼  Hugo是用go語言開發的靜態網站的生產器 (Static Site Generator)，有快速的架站速度和高靈活性。
  安裝 Hugo有很多安裝方式，有Windows/macOS/Linux，這裡主要介紹Window和macOS的安裝方法，其他安裝方法請直接到官網查詢。
-Scoop (Windows) scoop install hugoscoop install hugo-extendedHomebrew (macOS) brew建立網站 hugo new site webside布置主題 Hugo沒有預設主題需到官網Themes下載。
+Scoop (Windows) scoop install hugoscoop install hugo-extendedHomebrew (macOS) brew install hugo建立網站 hugo new site webside布置主題 Hugo沒有預設主題需到官網Themes下載。
 使用git下載
 cd wibsidegit initgit submodule add https://github.com/liuzc/LeaveIt.git沒有也沒關係，下載LeaveIt Themes後解壓縮。
 編輯config.toml將主題設為LeaveIt 開啟config.toml輸入
 theme = &amp;quot;LeaveIt&amp;quot;也可將LeaveIt檔案裡的exampleSite/config.toml剪下覆蓋原檔案。
 建立新文章 hugo new posts/my-first-post.md文章會在/content目錄中
 啟動台 hugo server -D Hugo預設port為http://localhost:1313/
- 部屬 當網站完成後，產生靜態檔案到public資料夾下並部屬到遠端主機上。
-各平台部署方式參考。</description>
+ 部屬 當網站完成後，產生靜態檔案到public資料夾下並部屬到遠端主機上。</description>
     </item>
     
   </channel>

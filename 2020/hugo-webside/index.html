@@ -36,7 +36,7 @@
     "articleSection" : "posts",
     "name" : "Hugo建立部落格\/網站",
     "headline" : "Hugo建立部落格\/網站",
-    "description" : "目錄  Hugo是什麼 安裝 建立網站 布置主題 編輯config.toml 建立新文章 啟動台 部屬  Hugo是什麼  Hugo是用go語言開發的靜態網站的生產器 (Static Site Generator)，有快速的架站速度和高靈活性。\n 安裝 Hugo有很多安裝方式，有Windows\/macOS\/Linux，這裡主要介紹Window和macOS的安裝方法，其他安裝方法請直接到官網查詢。\nScoop (Windows) scoop install hugo\rscoop install hugo-extended\rHomebrew (macOS) brew\r建立網站 hugo new site webside\r布置主題 Hugo沒有預設主題需到官網Themes下載。\n使用git下載\ncd wibside\rgit init\rgit submodule add https:\/\/github.com\/liuzc\/LeaveIt.git\r沒有也沒關係，下載LeaveIt Themes後解壓縮。\n編輯config.toml將主題設為LeaveIt 開啟config.toml輸入\ntheme = \u0026quot;LeaveIt\u0026quot;\r也可將LeaveIt檔案裡的exampleSite\/config.toml剪下覆蓋原檔案。\n建立新文章 hugo new posts\/my-first-post.md\r文章會在\/content目錄中\n啟動台 hugo server -D\r Hugo預設port為http:\/\/localhost:1313\/\n 部屬 當網站完成後，產生靜態檔案到public資料夾下並部屬到遠端主機上。\n各平台部署方式參考。",
+    "description" : "目錄  Hugo是什麼 安裝 建立網站 布置主題 編輯config.toml 建立新文章 啟動台 部屬  Hugo是什麼  Hugo是用go語言開發的靜態網站的生產器 (Static Site Generator)，有快速的架站速度和高靈活性。\n 安裝 Hugo有很多安裝方式，有Windows\/macOS\/Linux，這裡主要介紹Window和macOS的安裝方法，其他安裝方法請直接到官網查詢。\nScoop (Windows) scoop install hugo\rscoop install hugo-extended\rHomebrew (macOS) brew install hugo\r建立網站 hugo new site webside\r布置主題 Hugo沒有預設主題需到官網Themes下載。\n使用git下載\ncd wibside\rgit init\rgit submodule add https:\/\/github.com\/liuzc\/LeaveIt.git\r沒有也沒關係，下載LeaveIt Themes後解壓縮。\n編輯config.toml將主題設為LeaveIt 開啟config.toml輸入\ntheme = \u0026quot;LeaveIt\u0026quot;\r也可將LeaveIt檔案裡的exampleSite\/config.toml剪下覆蓋原檔案。\n建立新文章 hugo new posts\/my-first-post.md\r文章會在\/content目錄中\n啟動台 hugo server -D\r Hugo預設port為http:\/\/localhost:1313\/\n 部屬 當網站完成後，產生靜態檔案到public資料夾下並部屬到遠端主機上。",
     "inLanguage" : "zh-TW",
     "author" : "Cason Yang",
     "creator" : "Cason Yang",
@@ -47,7 +47,7 @@
     "datePublished": "2020-07-07 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-07-07 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/yang-lin94.github.io\/2020\/hugo-webside\/",
-    "wordCount" : "64",
+    "wordCount" : "66",
     "keywords" : [ "hugo","blog","webside", "Cason\u0027s Blog"]
 }
 </script>
@@ -158,7 +158,7 @@ if (!doNotTrack) {
 <pre><code>scoop install hugo
 scoop install hugo-extended
 </code></pre><h3 id="homebrew-macos">Homebrew (macOS)</h3>
-<pre><code>brew
+<pre><code>brew install hugo
 </code></pre><h2 id="建立網站">建立網站</h2>
 <pre><code>hugo new site webside
 </code></pre><h2 id="布置主題">布置主題</h2>
@@ -205,7 +205,7 @@ git submodule add https://github.com/liuzc/LeaveIt.git
             
              
             <p class="copyright-item lincese">
-                本著作係採用<a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/tw/" target="_blank">創用 CC 姓名標示-相同方式分享 3.0 台灣 授權條款</a>授權.
+                <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/tw/" target="_blank">本著作係採用創用 CC 姓名標示-相同方式分享 3.0 台灣 授權條款</a>授權.
             </p>
             
     </div>
