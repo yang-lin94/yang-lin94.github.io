@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Cason&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 07 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://yang-lin94.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hugo</title>
+      <link>https://yang-lin94.github.io/tags/hugo/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yang-lin94.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>likecoin</title>
+      <link>https://yang-lin94.github.io/tags/likecoin/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yang-lin94.github.io/tags/likecoin/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>blog</title>
@@ -17,15 +35,6 @@
       <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://yang-lin94.github.io/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://yang-lin94.github.io/tags/hugo/</link>
-      <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://yang-lin94.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     

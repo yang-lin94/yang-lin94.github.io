@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noodp" /> 
-    <meta name="author" content="Cason Yang">     
-    <link rel="next" href="https://yang-lin94.github.io/2020/hugo-likecoin/" />
-    <link rel="canonical" href="https://yang-lin94.github.io/2020/hugo-webside/" />
+    <meta name="author" content="Cason Yang">    
+    <link rel="prev" href="https://yang-lin94.github.io/2020/hugo-webside/" /> 
+    <link rel="canonical" href="https://yang-lin94.github.io/2020/hugo-likecoin/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -17,9 +17,9 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>
-          Hugo建立部落格/網站 | Cason&#39;s Blog 
+          Hugo使用Likecoin教學 | Cason&#39;s Blog 
     </title>
-    <meta name="title" content="Hugo建立部落格/網站 | Cason&#39;s Blog">   
+    <meta name="title" content="Hugo使用Likecoin教學 | Cason&#39;s Blog">   
   
   <link rel="stylesheet" href="/font/iconfont.css">
   <link rel="stylesheet" href="/css/main.min.css">
@@ -35,9 +35,9 @@
          "@id": "https:\/\/yang-lin94.github.io"
     },
     "articleSection" : "posts",
-    "name" : "Hugo建立部落格\/網站",
-    "headline" : "Hugo建立部落格\/網站",
-    "description" : "目錄  Hugo是什麼 安裝 建立網站 布置主題 編輯config.toml 建立新文章 啟動台 部屬  Hugo是什麼  Hugo是用go語言開發的靜態網站的生產器 (Static Site Generator)，有快速的架站速度和高靈活性。\n 安裝 Hugo有很多安裝方式，有Windows\/macOS\/Linux，這裡主要介紹Window和macOS的安裝方法，其他安裝方法請直接到官網查詢。\nScoop (Windows) scoop install hugo\rscoop install hugo-extended\rHomebrew (macOS) brew install hugo\r建立網站 hugo new site webside\r布置主題 Hugo沒有預設主題需到官網Themes下載。\n使用git下載\ncd wibside\rgit init\rgit submodule add https:\/\/github.com\/liuzc\/LeaveIt.git\r沒有也沒關係，下載LeaveIt Themes後解壓縮。\n編輯config.toml將主題設為LeaveIt 開啟config.toml輸入\ntheme = \u0026quot;LeaveIt\u0026quot;\r也可將LeaveIt檔案裡的exampleSite\/config.toml剪下覆蓋原檔案。\n建立新文章 hugo new posts\/my-first-post.md\r文章會在\/content目錄中\n啟動台 hugo server -D\r Hugo預設port為http:\/\/localhost:1313\/\n 部屬 當網站完成後，產生靜態檔案到public資料夾下並部屬到遠端主機上。",
+    "name" : "Hugo使用Likecoin教學",
+    "headline" : "Hugo使用Likecoin教學",
+    "description" : "目錄  什麼是Likecoin 如何在Hugo上插入Likecoin  什麼是Likecoin Likecoin是什麼? 它是它是一種虛擬貨幣，是以太坊區域鍊延伸出來的，透過點讚，轉化成優質創作者的實質贊助，並且擁有去中心化的特性。\n去中心化是什麼? 簡單來說，就是將中央處理中心移除，透過點對點的方式進行交易，讓帳本公開給每個人。\n詳細說明請參考 LikeCoin的 計畫介紹白皮書 如何在Hugo上插入Likecoin Hugo可以透過自訂layouts的方式，再不改變網頁原先的設計，在我們的每篇文章下插入Likebutton。\n先將目錄切到themes的layout資料夾下。\n\/cd theme\/your_theme\/layouts\/\r使用Hugo中的Partial的功能，建立模板在網頁中。 在layouts裡的partials資料夾中建立 likecoin.html，並寫入以下內容。 寫在要給讀著看的位置。 參考資料。\n\u0026lt;iframe class=\u0026#34;LikeCoin\u0026#34; height=\u0026#34;235\u0026#34; src=\u0026#34;https:\/\/button.like.co\/in\/embed\/{{ .Site.Params.likerID }}\/button?referrer={{ .Permalink }}\u0026#34; width=\u0026#34;100%\u0026#34; frameborder=0\u0026gt;\u0026lt;\/iframe\u0026gt; 接下來在 config.toml 中加入\n[[params]] likerID = \u0026#34;your liker id\u0026#34; 接著編輯文章的模板，默認位置通常在_default\/single.html。 接著在你想插入Button的地方寫上以下內容。\n{{ partial \u0026quot;likecoin.html\u0026quot; . }}\r記得執行hugo server預覽你的網站 最後執行hugo在部屬到github上即可",
     "inLanguage" : "zh-TW",
     "author" : "Cason Yang",
     "creator" : "Cason Yang",
@@ -45,11 +45,11 @@
     "accountablePerson" : "Cason Yang",
     "copyrightHolder" : "Cason Yang",
     "copyrightYear" : "2020",
-    "datePublished": "2020-07-07 00:00:00 \u002b0000 UTC",
-    "dateModified" : "2020-07-07 00:00:00 \u002b0000 UTC",
-    "url" : "https:\/\/yang-lin94.github.io\/2020\/hugo-webside\/",
-    "wordCount" : "66",
-    "keywords" : [ "hugo","blog","webside", "Cason\u0027s Blog"]
+    "datePublished": "2020-07-23 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2020-07-23 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/yang-lin94.github.io\/2020\/hugo-likecoin\/",
+    "wordCount" : "50",
+    "keywords" : [ "hugo","likecoin", "Cason\u0027s Blog"]
 }
 </script>
  
@@ -107,11 +107,11 @@ if (!doNotTrack) {
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Hugo建立部落格/網站</h1>
+        <h1 class="post-title" itemprop="name headline">Hugo使用Likecoin教學</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://yang-lin94.github.io" rel="author">Cason Yang</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2020-07-07 itemprop="datePublished">July 7, 2020</time>
+                on <time datetime=2020-07-23 itemprop="datePublished">July 23, 2020</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
@@ -126,7 +126,7 @@ if (!doNotTrack) {
 
         
 
-        <img src="/images/hugo-webside/hugo-home.png" class="featured_image">
+        <img src="/images/hugo-likecoin/likecoin-home.png" class="featured_image">
         
         
      
@@ -140,52 +140,28 @@ if (!doNotTrack) {
 
           <h2 id="目錄">目錄</h2>
 <ul>
-<li><a href="#Hugo%E6%98%AF%E4%BB%80%E9%BA%BC">Hugo是什麼</a></li>
-<li><a href="#%E5%AE%89%E8%A3%9D">安裝</a></li>
-<li><a href="#%E5%BB%BA%E7%AB%8B%E7%B6%B2%E7%AB%99">建立網站</a></li>
-<li><a href="#%E5%B8%83%E7%BD%AE%E4%B8%BB%E9%A1%8C">布置主題</a></li>
-<li><a href="#%E7%B7%A8%E8%BC%AFconfig.toml%E5%B0%87%E4%B8%BB%E9%A1%8C%E8%A8%AD%E7%82%BALeaveIt">編輯config.toml</a></li>
-<li><a href="#%E5%BB%BA%E7%AB%8B%E6%96%B0%E6%96%87%E7%AB%A0">建立新文章</a></li>
-<li><a href="#%E5%95%9F%E5%8B%95%E5%8F%B0">啟動台</a></li>
-<li><a href="#%E9%83%A8%E5%B1%AC">部屬</a></li>
+<li><a href="#%E4%BB%80%E9%BA%BC%E6%98%AFLikecoin">什麼是Likecoin</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%9C%A8Hugo%E4%B8%8A%E6%8F%92%E5%85%A5Likecoin">如何在Hugo上插入Likecoin</a></li>
 </ul>
-<h2 id="hugo是什麼">Hugo是什麼</h2>
-<blockquote>
-<p>Hugo是用go語言開發的靜態網站的生產器 (Static Site Generator)，有快速的架站速度和高靈活性。</p>
-</blockquote>
-<h2 id="安裝">安裝</h2>
-<p>Hugo有很多安裝方式，有Windows/macOS/Linux，這裡主要介紹Window和macOS的安裝方法，其他安裝方法請直接到<a href="https://gohugo.io/getting-started/installing" title="hugo官網">官網</a>查詢。</p>
-<h3 id="scoop-windows">Scoop (Windows)</h3>
-<pre><code>scoop install hugo
-scoop install hugo-extended
-</code></pre><h3 id="homebrew-macos">Homebrew (macOS)</h3>
-<pre><code>brew install hugo
-</code></pre><h2 id="建立網站">建立網站</h2>
-<pre><code>hugo new site webside
-</code></pre><h2 id="布置主題">布置主題</h2>
-<p>Hugo沒有預設主題需到<a href="https://themes.gohugo.io/">官網Themes</a>下載。</p>
-<p>使用git下載</p>
-<pre><code>cd wibside
-git init
-git submodule add https://github.com/liuzc/LeaveIt.git
-</code></pre><p>沒有也沒關係，下載<a href="https://github.com/liuzc/LeaveIt/archive/master.zip">LeaveIt Themes</a>後解壓縮。</p>
-<h2 id="編輯configtoml將主題設為leaveit">編輯config.toml將主題設為LeaveIt</h2>
-<p>開啟config.toml輸入</p>
-<pre><code>theme = &quot;LeaveIt&quot;
-</code></pre><p>也可將LeaveIt檔案裡的exampleSite/config.toml剪下覆蓋原檔案。</p>
-<h2 id="建立新文章">建立新文章</h2>
-<pre><code>hugo new posts/my-first-post.md
-</code></pre><p>文章會在/content目錄中</p>
-<h2 id="啟動台">啟動台</h2>
-<pre><code>hugo server -D
-</code></pre><blockquote>
-<p>Hugo預設port為http://localhost:1313/</p>
-</blockquote>
-<h2 id="部屬">部屬</h2>
-<p>當網站完成後，產生靜態檔案到<code>public</code>資料夾下並部屬到遠端主機上。</p>
-<p>各平台部署方式<a href="https://gohugo.io/hosting-and-deployment/">參考</a>。</p>
+<h2 id="什麼是likecoin">什麼是Likecoin</h2>
+<p><strong>Likecoin</strong>是什麼? 它是它是一種虛擬貨幣，是以太坊區域鍊延伸出來的，透過點讚，轉化成優質創作者的實質贊助，並且擁有<a href="https://zh.wikipedia.org/wiki/%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96">去中心化</a>的特性。</p>
+<p>去中心化是什麼? 簡單來說，就是將中央處理中心移除，透過點對點的方式進行交易，讓帳本公開給每個人。</p>
+<h4 id="詳細說明請參考-likecoin的-計畫介紹白皮書httpslikecoinwhitepaper">詳細說明請參考 LikeCoin的 <a href="https://like.co/in/whitepaper">計畫介紹白皮書</a></h4>
+<h2 id="如何在hugo上插入likecoin">如何在Hugo上插入Likecoin</h2>
+<p>Hugo可以透過自訂layouts的方式，再不改變網頁原先的設計，在我們的每篇文章下插入Likebutton。</p>
+<p>先將目錄切到themes的layout資料夾下。</p>
+<pre><code>/cd theme/your_theme/layouts/
+</code></pre><p>使用Hugo中的Partial的功能，建立模板在網頁中。 在layouts裡的partials資料夾中建立 likecoin.html，並寫入以下內容。 寫在要給讀著看的位置。 <a href="https://gohugo.io/templates/partials/">參考資料</a>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">iframe</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;LikeCoin&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;235&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://button.like.co/in/embed/{{ .Site.Params.likerID }}/button?referrer={{ .Permalink }}&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100%&#34;</span> <span style="color:#a6e22e">frameborder</span><span style="color:#f92672">=</span><span style="color:#e6db74">0</span>&gt;&lt;/<span style="color:#f92672">iframe</span>&gt;
+</code></pre></div><p>接下來在 <code>config.toml</code> 中加入</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">params</span>]]
+	<span style="color:#a6e22e">likerID</span> = <span style="color:#e6db74">&#34;your liker id&#34;</span>
+</code></pre></div><p>接著編輯文章的模板，默認位置通常在_default/single.html。 接著在你想插入Button的地方寫上以下內容。</p>
+<pre><code>{{ partial &quot;likecoin.html&quot; . }}
+</code></pre><h3 id="記得執行hugo-server預覽你的網站">記得執行<code>hugo server</code>預覽你的網站</h3>
+<p>最後執行<code>hugo</code>在部屬到github上即可</p>
 
-          <iframe class="LikeCoin" height="235" src="https://button.like.co/in/embed/cason_yang/button?referrer=https%3a%2f%2fyang-lin94.github.io%2f2020%2fhugo-webside%2f" width="100%" frameborder=0></iframe>
+          <iframe class="LikeCoin" height="235" src="https://button.like.co/in/embed/cason_yang/button?referrer=https%3a%2f%2fyang-lin94.github.io%2f2020%2fhugo-likecoin%2f" width="100%" frameborder=0></iframe>
           <h4>如果喜歡我的文章記得幫我點個讚喔</h4>
           <h4>您只需要支持我們，完全不會花到錢！</h4>
     </div>
@@ -201,7 +177,7 @@ git submodule add https://github.com/liuzc/LeaveIt.git
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://yang-lin94.github.io/2020/hugo-webside/>https://yang-lin94.github.io/2020/hugo-webside/</span>
+                    <a href=https://yang-lin94.github.io/2020/hugo-likecoin/>https://yang-lin94.github.io/2020/hugo-likecoin/</span>
             </p>
             
              
@@ -220,11 +196,8 @@ git submodule add https://github.com/liuzc/LeaveIt.git
             <span class="tag"><a href="https://yang-lin94.github.io/tags/hugo/">
                     #hugo</a></span>
             
-            <span class="tag"><a href="https://yang-lin94.github.io/tags/blog/">
-                    #blog</a></span>
-            
-            <span class="tag"><a href="https://yang-lin94.github.io/tags/webside/">
-                    #webside</a></span>
+            <span class="tag"><a href="https://yang-lin94.github.io/tags/likecoin/">
+                    #likecoin</a></span>
             
             </section>
         
@@ -235,9 +208,9 @@ git submodule add https://github.com/liuzc/LeaveIt.git
     </div>
 
     <div class="post-nav">
-         
         
-        <a href="https://yang-lin94.github.io/2020/hugo-likecoin/" class="next" rel="next" title="Hugo使用Likecoin教學">Hugo使用Likecoin教學&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="https://yang-lin94.github.io/2020/hugo-webside/" class="prev" rel="prev" title="Hugo建立部落格/網站"><i class="iconfont icon-left"></i>&nbsp;Hugo建立部落格/網站</a>
+         
         
     </div>
 
