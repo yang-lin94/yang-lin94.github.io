@@ -27,7 +27,8 @@ theme = &amp;quot;LeaveIt&amp;quot;也可將LeaveIt檔案裡的exampleSite/conf
 建立新文章 hugo new posts/my-first-post.md文章會在/content目錄中
 啟動台 hugo server -D Hugo預設port為http://localhost:1313/
  部屬 當網站完成後，產生靜態檔案到public資料夾下並部屬到遠端主機上。
-各平台部署方式參考。</description>
+各平台部署方式參考。
+相關文章  Hugo使用Likecoin教學  </description>
     </item>
     
   </channel>
