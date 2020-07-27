@@ -17,16 +17,16 @@
       <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://yang-lin94.github.io/2020/hugo-likecoin/</guid>
-      <description>什麼是Likecoin Likecoin是什麼? 它是它是一種虛擬貨幣，是以太坊區域鍊延伸出來的，透過點讚，轉化成優質創作者的實質贊助，並且擁有去中心化的特性。
+      <description>一.什麼是Likecoin Likecoin是什麼? 它是它是一種虛擬貨幣，是以太坊區域鍊延伸出來的，透過點讚，轉化成優質創作者的實質贊助，並且擁有去中心化的特性。
 去中心化是什麼? 簡單來說，就是將中央處理中心移除，透過點對點的方式進行交易，讓帳本公開給每個人。
-詳細說明請參考 LikeCoin的 計畫介紹白皮書 如何在Hugo上插入Likecoin Hugo可以透過自訂layouts的方式，再不改變網頁原先的設計，在我們的每篇文章下插入Likebutton。
+詳細說明請參考 LikeCoin的 計畫介紹白皮書 二.如何在Hugo上插入Likecoin Hugo可以透過自訂layouts的方式，再不改變網頁原先的設計，在我們的每篇文章下插入Likebutton。
 先將目錄切到themes的layout資料夾下。
 /cd theme/your_theme/layouts/使用Hugo中的Partial的功能，建立模板在網頁中。 在layouts裡的partials資料夾中建立 likecoin.html，並寫入以下內容。 寫在要給讀著看的位置。 參考資料。
 &amp;lt;iframe class=&amp;#34;LikeCoin&amp;#34; height=&amp;#34;235&amp;#34; src=&amp;#34;https://button.like.co/in/embed/{{ .Site.Params.likerID }}/button?referrer={{ .Permalink }}&amp;#34; width=&amp;#34;100%&amp;#34; frameborder=0&amp;gt;&amp;lt;/iframe&amp;gt; 接下來在 config.toml 中加入
 [[params]] likerID = &amp;#34;your liker id&amp;#34; 接著編輯文章的模板，默認位置通常在_default/single.html。 接著在你想插入Button的地方寫上以下內容。
 {{ partial &amp;quot;likecoin.html&amp;quot; . }}  記得執行hugo server預覽你的網站
   最後執行hugo在部屬到github上即可
-  相關文章  Hugo建立部落格/網站  </description>
+  三.相關文章  Hugo建立部落格/網站  </description>
     </item>
     
   </channel>
