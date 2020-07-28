@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>webside on Cason&#39;s Blog</title>
-    <link>/tags/webside/</link>
+    <link>https://yang-lin94.github.io/tags/webside/</link>
     <description>Recent content in webside on Cason&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     <lastBuildDate>Tue, 07 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/webside/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yang-lin94.github.io/tags/webside/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo建立部落格/網站</title>
-      <link>/2020/hugo-webside/</link>
+      <link>https://yang-lin94.github.io/2020/hugo-webside/</link>
       <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/2020/hugo-webside/</guid>
+      <guid>https://yang-lin94.github.io/2020/hugo-webside/</guid>
       <description>一.Hugo是什麼  Hugo是用go語言開發的靜態網站的生產器 (Static Site Generator)，有快速的架站速度和高靈活性。
  二.安裝 Hugo有很多安裝方式，有Windows/macOS/Linux，這裡主要介紹Window和macOS的安裝方法，其他安裝方法請直接到官網查詢。
 1.Scoop (Windows) scoop install hugoscoop install hugo-extended2.Homebrew (macOS) brew install hugo三.建立網站 hugo new site webside四.布置主題 Hugo沒有預設主題需到官網Themes下載。

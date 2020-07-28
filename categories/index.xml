@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Cason&#39;s Blog</title>
-    <link>/categories/</link>
+    <link>https://yang-lin94.github.io/categories/</link>
     <description>Recent content in Categories on Cason&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yang-lin94.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>教學</title>
-      <link>/categories/%E6%95%99%E5%AD%B8/</link>
+      <link>https://yang-lin94.github.io/categories/%E6%95%99%E5%AD%B8/</link>
       <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/%E6%95%99%E5%AD%B8/</guid>
+      <guid>https://yang-lin94.github.io/categories/%E6%95%99%E5%AD%B8/</guid>
       <description></description>
     </item>
     

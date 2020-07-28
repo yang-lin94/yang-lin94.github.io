@@ -63,4 +63,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: sitemap.xml
+Sitemap: https://yang-lin94.github.io/sitemap.xml

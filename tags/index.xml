@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Cason&#39;s Blog</title>
-    <link>/tags/</link>
+    <link>https://yang-lin94.github.io/tags/</link>
     <description>Recent content in Tags on Cason&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yang-lin94.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>hugo</title>
-      <link>/tags/hugo/</link>
+      <link>https://yang-lin94.github.io/tags/hugo/</link>
       <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/hugo/</guid>
+      <guid>https://yang-lin94.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>likecoin</title>
-      <link>/tags/likecoin/</link>
+      <link>https://yang-lin94.github.io/tags/likecoin/</link>
       <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/likecoin/</guid>
+      <guid>https://yang-lin94.github.io/tags/likecoin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>blog</title>
-      <link>/tags/blog/</link>
+      <link>https://yang-lin94.github.io/tags/blog/</link>
       <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/blog/</guid>
+      <guid>https://yang-lin94.github.io/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>webside</title>
-      <link>/tags/webside/</link>
+      <link>https://yang-lin94.github.io/tags/webside/</link>
       <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/webside/</guid>
+      <guid>https://yang-lin94.github.io/tags/webside/</guid>
       <description></description>
     </item>
     
