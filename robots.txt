@@ -1,5 +1,7 @@
 User-agent: *
 
+Sitemap: https://yang-lin94.github.io/sitemap.xml
+
 Disallow: /images/
 Disallow: /js/
 Disallow: /css/
