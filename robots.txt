@@ -1,6 +1,5 @@
 User-agent: *
 
-Sitemap: https://yang-lin94.github.io/sitemap.xml
 
 Disallow: /images/
 Disallow: /js/
@@ -65,3 +64,6 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
+User-agent: *
+
+Sitemap: https://yang-lin94.github.io/sitemap.xml
