@@ -38,7 +38,7 @@
     "articleSection" : "posts",
     "name" : "Hugo建立部落格\/網站",
     "headline" : "Hugo建立部落格\/網站",
-    "description" : "一.Hugo是什麼  Hugo是用go語言開發的靜態網站的生產器 (Static Site Generator)，有快速的架站速度和高靈活性。\n 二.安裝 Hugo有很多安裝方式，有Windows\/macOS\/Linux，這裡主要介紹Window和macOS的安裝方法，其他安裝方法請直接到官網查詢。\n1.Scoop (Windows) scoop install hugo\rscoop install hugo-extended\r2.Homebrew (macOS) brew install hugo\r三.建立網站 hugo new site webside\r四.布置主題 Hugo沒有預設主題需到官網Themes下載。\n使用git下載\ncd wibside\rgit init\rgit submodule add https:\/\/github.com\/liuzc\/LeaveIt.git\r沒有也沒關係，下載LeaveIt Themes後解壓縮。\n五.編輯config.toml將主題設為LeaveIt 開啟config.toml輸入\ntheme = \u0026quot;LeaveIt\u0026quot;\r也可將LeaveIt檔案裡的exampleSite\/config.toml剪下覆蓋原檔案。\n六.建立新文章 hugo new posts\/my-first-post.md\r文章會在\/content目錄中\n七.啟動台 hugo server -D\r Hugo預設port為http:\/\/localhost:1313\/\n 八.部屬 當網站完成後，產生靜態檔案到public資料夾下並部屬到遠端主機上。\n各平台部署方式參考。\n九.相關文章  Hugo使用Likecoin教學  ",
+    "description" : "Hugo是用go語言開發的靜態網站的生產器 (Static Site Generator)，有快速的架站速度和高靈活性......",
     "inLanguage" : "zh-TW",
     "author" : "Cason Yang",
     "creator" : "Cason Yang",
@@ -202,30 +202,30 @@ if (!doNotTrack) {
 <h2 id="二安裝">二.安裝</h2>
 <p>Hugo有很多安裝方式，有Windows/macOS/Linux，這裡主要介紹Window和macOS的安裝方法，其他安裝方法請直接到<a href="https://gohugo.io/getting-started/installing" title="hugo官網">官網</a>查詢。</p>
 <h3 id="1scoop-windows">1.Scoop (Windows)</h3>
-<pre><code>scoop install hugo
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">scoop install hugo
 scoop install hugo-extended
-</code></pre><h3 id="2homebrew-macos">2.Homebrew (macOS)</h3>
-<pre><code>brew install hugo
-</code></pre><h2 id="三建立網站">三.建立網站</h2>
-<pre><code>hugo new site webside
-</code></pre><h2 id="四布置主題">四.布置主題</h2>
+</code></pre></div><h3 id="2homebrew-macos">2.Homebrew (macOS)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install hugo
+</code></pre></div><h2 id="三建立網站">三.建立網站</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo new site webside
+</code></pre></div><h2 id="四布置主題">四.布置主題</h2>
 <p>Hugo沒有預設主題需到<a href="https://themes.gohugo.io/">官網Themes</a>下載。</p>
 <p>使用git下載</p>
-<pre><code>cd wibside
+<pre><code class="language-git" data-lang="git">cd wibside
 git init
 git submodule add https://github.com/liuzc/LeaveIt.git
 </code></pre><p>沒有也沒關係，下載<a href="https://github.com/liuzc/LeaveIt/archive/master.zip">LeaveIt Themes</a>後解壓縮。</p>
 <h2 id="五編輯configtoml將主題設為leaveit">五.編輯config.toml將主題設為LeaveIt</h2>
 <p>開啟config.toml輸入</p>
-<pre><code>theme = &quot;LeaveIt&quot;
-</code></pre><p>也可將LeaveIt檔案裡的exampleSite/config.toml剪下覆蓋原檔案。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;LeaveIt&#34;</span>
+</code></pre></div><p>也可將LeaveIt檔案裡的exampleSite/config.toml剪下覆蓋原檔案。</p>
 <h2 id="六建立新文章">六.建立新文章</h2>
-<pre><code>hugo new posts/my-first-post.md
-</code></pre><p>文章會在/content目錄中</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo new posts/my-first-post.md
+</code></pre></div><p>文章會在/content目錄中</p>
 <h2 id="七啟動台">七.啟動台</h2>
-<pre><code>hugo server -D
-</code></pre><blockquote>
-<p>Hugo預設port為http://localhost:1313/</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo server -D
+</code></pre></div><blockquote>
+<p>Hugo預設port為<a href="http://localhost:1313/">http://localhost:1313/</a></p>
 </blockquote>
 <h2 id="八部屬">八.部屬</h2>
 <p>當網站完成後，產生靜態檔案到<code>public</code>資料夾下並部屬到遠端主機上。</p>
@@ -362,6 +362,22 @@ git submodule add https://github.com/liuzc/LeaveIt.git
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['$$','$$'], ['\[','\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: {
+                equationNumbers: { autoNumber: "AMS" },
+                extensions: ["AMSmath.js", "AMSsymbols.js"]
+            }
+        }
+    });
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
      </div>
   </body>
 </html>

@@ -6,10 +6,30 @@
     <description>Recent content in Posts on Cason&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://yang-lin94.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>imgur 免費圖片空間 註冊&amp;教學</title>
+      <link>https://yang-lin94.github.io/2020/free-image-space-imgur/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yang-lin94.github.io/2020/free-image-space-imgur/</guid>
+      <description>一.imgur是什麽 imgur提供免費的圖片儲存空間，2009年成立並提供圖片的存取服務，由於操作簡單、系統穩定、使用限制少，深受眾多用戶喜愛，現今每日用戶數高達百萬，imgur也和一些第三方服務結合，提供上傳imgur後產生快速分享連結。
+基本上imgur 沒有空間上的限制，無須註冊及可使用，主要限制是用戶只能看得到自己最近上傳的 225 張圖片，超過後只會顯示最新的，但原先的圖片並沒有不見，只是從圖片清單被隱藏，使用連結還是可以找到。
+imgur 支援 JPEG, PNG, GIF, APNG, TIFF, BMP, PDF, XCF (GIMP) 等圖片格式，TIFF, BMP, PDF,XCF 會被轉為 PNG 上傳。圖片大小限制為 10 MB（非動態圖），當圖片超過 1 MB 時，會強制壓縮到 1 MB 以獲得最佳的瀏覽品質，最大的動態圖檔大小為 2 MB
+ 網站連結 應用程式  二.註冊 點選右上角的「Sign up」註冊帳號。
+將使用者資料填入註冊表單上，輸入完成後點選「Next」。
+也可以使用Twitter、Google、Facebook、Apple 或 Yahoo! 帳戶來快速登錄
+Username：帳號 Email：電子信箱 Password：密碼 Retype Password：確認密碼 Phone Number：電話號碼 接著點選驗證，然後點選「Register」就完成囉。
+三.使用方法 1.上傳 註冊完畢之後，在右上角的帳號的下拉選單內點選「images」。 點選「Add images」。
+點選「Browse」選擇上傳圖片，或將圖片拖拉進框框內。
+2.使用imgur當blog圖床 依上步驟將圖片儲存在imgur後，點選圖片。
+點選自身blog網頁所使用的語言。
+本網站使用hugo架設 參考:Hugo建立部落格/網站</description>
+    </item>
     
     <item>
       <title>Hugo使用Likecoin教學</title>
@@ -19,12 +39,13 @@
       <guid>https://yang-lin94.github.io/2020/hugo-likecoin/</guid>
       <description>一.什麼是Likecoin Likecoin是什麼? 它是它是一種虛擬貨幣，是以太坊區域鍊延伸出來的，透過點讚，轉化成優質創作者的實質贊助，並且擁有去中心化的特性。
 去中心化是什麼? 簡單來說，就是將中央處理中心移除，透過點對點的方式進行交易，讓帳本公開給每個人。
-詳細說明請參考 LikeCoin的 計畫介紹白皮書 二.如何在Hugo上插入Likecoin Hugo可以透過自訂layouts的方式，再不改變網頁原先的設計，在我們的每篇文章下插入Likebutton。
+詳細說明請參考 LikeCoin的 計畫介紹白皮書
+二.如何在Hugo上插入Likecoin Hugo可以透過自訂layouts的方式，再不改變網頁原先的設計，在我們的每篇文章下插入Likebutton。
 先將目錄切到themes的layout資料夾下。
-/cd theme/your_theme/layouts/使用Hugo中的Partial的功能，建立模板在網頁中。 在layouts裡的partials資料夾中建立 likecoin.html，並寫入以下內容。 寫在要給讀著看的位置。 參考資料。
+/cd theme/your_theme/layouts/ 使用Hugo中的Partial的功能，建立模板在網頁中。 在layouts裡的partials資料夾中建立 likecoin.html，並寫入以下內容。 寫在要給讀著看的位置。 參考資料。
 &amp;lt;iframe class=&amp;#34;LikeCoin&amp;#34; height=&amp;#34;235&amp;#34; src=&amp;#34;https://button.like.co/in/embed/{{ .Site.Params.likerID }}/button?referrer={{ .Permalink }}&amp;#34; width=&amp;#34;100%&amp;#34; frameborder=0&amp;gt;&amp;lt;/iframe&amp;gt; 接下來在 config.toml 中加入
 [[params]] likerID = &amp;#34;your liker id&amp;#34; 接著編輯文章的模板，默認位置通常在_default/single.html。 接著在你想插入Button的地方寫上以下內容。
-{{ partial &amp;quot;likecoin.html&amp;quot; . }}  記得執行hugo server預覽你的網站
+{{ partial &amp;#34;likecoin.html&amp;#34; . }}   記得執行hugo server預覽你的網站
   最後執行hugo在部屬到github上即可
   三.相關文章  Hugo建立部落格/網站  </description>
     </item>
@@ -37,13 +58,13 @@
       <guid>https://yang-lin94.github.io/2020/hugo-webside/</guid>
       <description>一.Hugo是什麼  Hugo是用go語言開發的靜態網站的生產器 (Static Site Generator)，有快速的架站速度和高靈活性。
  二.安裝 Hugo有很多安裝方式，有Windows/macOS/Linux，這裡主要介紹Window和macOS的安裝方法，其他安裝方法請直接到官網查詢。
-1.Scoop (Windows) scoop install hugoscoop install hugo-extended2.Homebrew (macOS) brew install hugo三.建立網站 hugo new site webside四.布置主題 Hugo沒有預設主題需到官網Themes下載。
+1.Scoop (Windows) scoop install hugo scoop install hugo-extended 2.Homebrew (macOS) brew install hugo 三.建立網站 hugo new site webside 四.布置主題 Hugo沒有預設主題需到官網Themes下載。
 使用git下載
 cd wibsidegit initgit submodule add https://github.com/liuzc/LeaveIt.git沒有也沒關係，下載LeaveIt Themes後解壓縮。
 五.編輯config.toml將主題設為LeaveIt 開啟config.toml輸入
-theme = &amp;quot;LeaveIt&amp;quot;也可將LeaveIt檔案裡的exampleSite/config.toml剪下覆蓋原檔案。
-六.建立新文章 hugo new posts/my-first-post.md文章會在/content目錄中
-七.啟動台 hugo server -D Hugo預設port為http://localhost:1313/
+theme = &amp;#34;LeaveIt&amp;#34; 也可將LeaveIt檔案裡的exampleSite/config.toml剪下覆蓋原檔案。
+六.建立新文章 hugo new posts/my-first-post.md 文章會在/content目錄中
+七.啟動台 hugo server -D  Hugo預設port為http://localhost:1313/
  八.部屬 當網站完成後，產生靜態檔案到public資料夾下並部屬到遠端主機上。
 各平台部署方式參考。
 九.相關文章  Hugo使用Likecoin教學  </description>
