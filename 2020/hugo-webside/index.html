@@ -49,7 +49,7 @@
     "datePublished": "2020-07-07 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-07-07 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/yang-lin94.github.io\/2020\/hugo-webside\/",
-    "wordCount" : "59",
+    "wordCount" : "96",
     "keywords" : [ "hugo","blog","webside", "Cason\u0027s Blog"]
 }
 </script>
@@ -71,6 +71,7 @@ if (!doNotTrack) {
   
   <body class="">
     <div class="wrapper">
+        <script data-ad-client="ca-pub-6128265117632402" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <nav class="navbar">
     
     <div class="top-scroll-bar"></div>
@@ -81,7 +82,7 @@ if (!doNotTrack) {
         </div>
         <div class="menu navbar-right">
              
-            <a class="menu-item" href="/posts/" title="">Blog</a> 
+            <a class="menu-item" href="/posts/" title="">Posts</a> 
             <a class="menu-item" href="/categories/" title="">Categories</a> 
             <a class="menu-item" href="/tags/" title="">Tags</a> 
             <a class="menu-item" href="/about/" title="">About</a> 
@@ -99,7 +100,7 @@ if (!doNotTrack) {
 
         <div class="menu" id="mobile-menu">
              
-            <a class="menu-item" href="/posts/" title="">Blog</a> 
+            <a class="menu-item" href="/posts/" title="">Posts</a> 
             <a class="menu-item" href="/categories/" title="">Categories</a> 
             <a class="menu-item" href="/tags/" title="">Tags</a> 
             <a class="menu-item" href="/about/" title="">About</a> 
@@ -137,15 +138,22 @@ if (!doNotTrack) {
       <ul>
         <li><a href="#1scoop-windows">1.Scoop (Windows)</a></li>
         <li><a href="#2homebrew-macos">2.Homebrew (macOS)</a></li>
+        <li><a href="#3透過github-release-下載">3.透過github release 下載</a></li>
+        <li><a href="#4環境變數">4.環境變數</a></li>
+        <li><a href="#5安裝確認">5.安裝確認</a></li>
+        <li><a href="#6建立網站">6.建立網站</a></li>
       </ul>
     </li>
-    <li><a href="#三建立網站">三.建立網站</a></li>
-    <li><a href="#四布置主題">四.布置主題</a></li>
-    <li><a href="#五編輯configtoml將主題設為leaveit">五.編輯config.toml將主題設為LeaveIt</a></li>
-    <li><a href="#六建立新文章">六.建立新文章</a></li>
-    <li><a href="#七啟動台">七.啟動台</a></li>
-    <li><a href="#八部屬">八.部屬</a></li>
-    <li><a href="#九相關文章">九.相關文章</a></li>
+    <li><a href="#三選擇主題">三.選擇主題</a>
+      <ul>
+        <li><a href="#1下載主題">1.下載主題</a></li>
+        <li><a href="#2編輯configtoml將主題設為leaveit">2.編輯config.toml將主題設為LeaveIt</a></li>
+      </ul>
+    </li>
+    <li><a href="#四啟動hugo網頁">四.啟動Hugo網頁</a></li>
+    <li><a href="#五資料夾結構">五.資料夾結構</a></li>
+    <li><a href="#六部屬">六.部屬</a></li>
+    <li><a href="#七相關文章">七.相關文章</a></li>
   </ul>
 </nav>
     </div>
@@ -206,31 +214,49 @@ if (!doNotTrack) {
 scoop install hugo-extended
 </code></pre></div><h3 id="2homebrew-macos">2.Homebrew (macOS)</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install hugo
-</code></pre></div><h2 id="三建立網站">三.建立網站</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo new site webside
-</code></pre></div><h2 id="四布置主題">四.布置主題</h2>
+</code></pre></div><h3 id="3透過github-release-下載">3.透過github release 下載</h3>
+<p>下在網站的<a href="https://github.com/gohugoio/hugo/releases" title="github release">release</a>選擇自己電腦的最新版本，例如:hugo_0.76.5_Windows-64bit.zip 下載解壓縮，建立Blog的資料夾，將hugo.exe放入目錄中</p>
+<h3 id="4環境變數">4.環境變數</h3>
+<p>啟動<code>環境變數</code></p>
+<p>快捷鍵：<code>win + R</code></p>
+<p>輸入：<code>rundll32.exe sysdm.cpl,EditEnvironmentVariables</code></p>
+<p>對PATH編輯，新增 &gt; 輸入hugo.exe所在的目錄 &gt; 確定</p>
+<h3 id="5安裝確認">5.安裝確認</h3>
+<p>開啟命列提示字元CMD</p>
+<p>快捷鍵：<code>win + R</code></p>
+<p>輸入 <code>hugo version</code></p>
+<p><strong>如有顯示版本代表安裝成功</strong></p>
+<h3 id="6建立網站">6.建立網站</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo new site 資料夾名稱
+</code></pre></div><p>這樣就完成一個簡單的hugo網頁啦。</p>
+<h2 id="三選擇主題">三.選擇主題</h2>
+<h3 id="1下載主題">1.下載主題</h3>
+<p>本人使用LeaveIt hugo 的主題。</p>
 <p>Hugo沒有預設主題需到<a href="https://themes.gohugo.io/">官網Themes</a>下載。</p>
-<p>使用git下載</p>
+<p><strong>使用git clone下載</strong></p>
+<p>切換到建立好的網站資料夾底下</p>
+<p>下載指令</p>
 <pre><code class="language-git" data-lang="git">cd wibside
 git init
 git submodule add https://github.com/liuzc/LeaveIt.git
 </code></pre><p>沒有也沒關係，下載<a href="https://github.com/liuzc/LeaveIt/archive/master.zip">LeaveIt Themes</a>後解壓縮。</p>
-<h2 id="五編輯configtoml將主題設為leaveit">五.編輯config.toml將主題設為LeaveIt</h2>
+<p>到<code>themes\LeaveIt</code>，刪除<code>.git</code>隱藏資料夾</p>
+<p>開啟<code>隱藏項目</code>,打勾 <code>隱藏的項目</code></p>
+<p>將<code>LeaveIt/exampleSite</code>內的資料複製到根目錄資料夾</p>
+<p>根目錄資料夾的<code>config.toml</code>蓋掉掉</p>
+<p>注意：<code>config資料夾為設定檔</code></p>
+<h3 id="2編輯configtoml將主題設為leaveit">2.編輯config.toml將主題設為LeaveIt</h3>
 <p>開啟config.toml輸入</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;LeaveIt&#34;</span>
-</code></pre></div><p>也可將LeaveIt檔案裡的exampleSite/config.toml剪下覆蓋原檔案。</p>
-<h2 id="六建立新文章">六.建立新文章</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo new posts/my-first-post.md
-</code></pre></div><p>文章會在/content目錄中</p>
-<h2 id="七啟動台">七.啟動台</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo server -D
-</code></pre></div><blockquote>
-<p>Hugo預設port為<a href="http://localhost:1313/">http://localhost:1313/</a></p>
-</blockquote>
-<h2 id="八部屬">八.部屬</h2>
+</code></pre></div><h2 id="四啟動hugo網頁">四.啟動Hugo網頁</h2>
+<p>需再根目錄執行 <code>hugo server -D</code></p>
+<p>網頁上輸入：<code>http://localhost:1313/</code></p>
+<p>此時你就會發現你的網頁已經啟動了</p>
+<h2 id="五資料夾結構">五.資料夾結構</h2>
+<h2 id="六部屬">六.部屬</h2>
 <p>當網站完成後，產生靜態檔案到<code>public</code>資料夾下並部屬到遠端主機上。</p>
 <p>各平台部署方式<a href="https://gohugo.io/hosting-and-deployment/">參考</a>。</p>
-<h2 id="九相關文章">九.相關文章</h2>
+<h2 id="七相關文章">七.相關文章</h2>
 <ul>
 <li><a href="/2020/hugo-likecoin/">Hugo使用Likecoin教學</a></li>
 </ul>
@@ -292,22 +318,7 @@ git submodule add https://github.com/liuzc/LeaveIt.git
         
     </div>
 
-    <div align="center">
-        <style>
-        .adsbygoogle-comment { width: 99%; height: 60px; padding: 1rem 0px }
-        @media(min-width: 500px) { .adsbygoogle-comment { width: 99%; height: 70px; padding: 1rem 0px} }
-        @media(min-width: 800px) { .adsbygoogle-comment { width: 99%; height: 90px; padding: 1rem 0px} }
-        </style>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        
-        <ins class="adsbygoogle adsbygoogle-comment"
-             style="display:inline-block"
-             data-ad-client="ca-pub-6128265117632402"
-             data-ad-slot="2575339936"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        </div>
+
 
     <div class="post-comment">
           

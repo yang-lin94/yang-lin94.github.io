@@ -6,11 +6,7 @@
     <description>Recent content in blog on Cason&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 04 Sep 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://yang-lin94.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 04 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://yang-lin94.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>imgur 免費圖片空間 註冊&amp;教學</title>
       <link>https://yang-lin94.github.io/2020/free-image-space-imgur/</link>
@@ -58,16 +54,22 @@ Username：帳號 Email：電子信箱 Password：密碼 Retype Password：確�
       <guid>https://yang-lin94.github.io/2020/hugo-webside/</guid>
       <description>一.Hugo是什麼  Hugo是用go語言開發的靜態網站的生產器 (Static Site Generator)，有快速的架站速度和高靈活性。
  二.安裝 Hugo有很多安裝方式，有Windows/macOS/Linux，這裡主要介紹Window和macOS的安裝方法，其他安裝方法請直接到官網查詢。
-1.Scoop (Windows) scoop install hugo scoop install hugo-extended 2.Homebrew (macOS) brew install hugo 三.建立網站 hugo new site webside 四.布置主題 Hugo沒有預設主題需到官網Themes下載。
-使用git下載
-cd wibsidegit initgit submodule add https://github.com/liuzc/LeaveIt.git沒有也沒關係，下載LeaveIt Themes後解壓縮。
-五.編輯config.toml將主題設為LeaveIt 開啟config.toml輸入
-theme = &amp;#34;LeaveIt&amp;#34; 也可將LeaveIt檔案裡的exampleSite/config.toml剪下覆蓋原檔案。
-六.建立新文章 hugo new posts/my-first-post.md 文章會在/content目錄中
-七.啟動台 hugo server -D  Hugo預設port為http://localhost:1313/
- 八.部屬 當網站完成後，產生靜態檔案到public資料夾下並部屬到遠端主機上。
-各平台部署方式參考。
-九.相關文章  Hugo使用Likecoin教學  </description>
+1.Scoop (Windows) scoop install hugo scoop install hugo-extended 2.Homebrew (macOS) brew install hugo 3.透過github release 下載 下在網站的release選擇自己電腦的最新版本，例如:hugo_0.76.5_Windows-64bit.zip 下載解壓縮，建立Blog的資料夾，將hugo.exe放入目錄中
+4.環境變數 啟動環境變數
+快捷鍵：win + R
+輸入：rundll32.exe sysdm.cpl,EditEnvironmentVariables
+對PATH編輯，新增 &amp;gt; 輸入hugo.exe所在的目錄 &amp;gt; 確定
+5.安裝確認 開啟命列提示字元CMD
+快捷鍵：win + R
+輸入 hugo version
+如有顯示版本代表安裝成功
+6.建立網站 hugo new site 資料夾名稱 這樣就完成一個簡單的hugo網頁啦。
+三.選擇主題 1.下載主題 本人使用LeaveIt hugo 的主題。
+Hugo沒有預設主題需到官網Themes下載。
+使用git clone下載
+切換到建立好的網站資料夾底下
+下載指令
+cd wibsidegit initgit submodule add https://github.</description>
     </item>
     
   </channel>
