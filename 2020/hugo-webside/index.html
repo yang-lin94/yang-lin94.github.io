@@ -49,7 +49,7 @@
     "datePublished": "2020-07-07 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-07-07 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/yang-lin94.github.io\/2020\/hugo-webside\/",
-    "wordCount" : "96",
+    "wordCount" : "148",
     "keywords" : [ "hugo","blog","webside", "Cason\u0027s Blog"]
 }
 </script>
@@ -152,8 +152,14 @@ if (!doNotTrack) {
     </li>
     <li><a href="#四啟動hugo網頁">四.啟動Hugo網頁</a></li>
     <li><a href="#五資料夾結構">五.資料夾結構</a></li>
-    <li><a href="#六部屬">六.部屬</a></li>
-    <li><a href="#七相關文章">七.相關文章</a></li>
+    <li><a href="#六建立文章">六.建立文章</a>
+      <ul>
+        <li><a href="#1文章默認語法">1.文章默認語法</a></li>
+        <li><a href="#2圖片放置位置">2.圖片放置位置</a></li>
+      </ul>
+    </li>
+    <li><a href="#七部屬">七.部屬</a></li>
+    <li><a href="#八相關文章">八.相關文章</a></li>
   </ul>
 </nav>
     </div>
@@ -225,7 +231,7 @@ scoop install hugo-extended
 <p>開啟命列提示字元CMD</p>
 <p>快捷鍵：<code>win + R</code></p>
 <p>輸入 <code>hugo version</code></p>
-<p><strong>如有顯示版本代表安裝成功</strong></p>
+<p><strong><code>如有顯示版本代表安裝成功</code></strong></p>
 <h3 id="6建立網站">6.建立網站</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo new site 資料夾名稱
 </code></pre></div><p>這樣就完成一個簡單的hugo網頁啦。</p>
@@ -233,7 +239,7 @@ scoop install hugo-extended
 <h3 id="1下載主題">1.下載主題</h3>
 <p>本人使用LeaveIt hugo 的主題。</p>
 <p>Hugo沒有預設主題需到<a href="https://themes.gohugo.io/">官網Themes</a>下載。</p>
-<p><strong>使用git clone下載</strong></p>
+<p><strong><code>使用git clone下載</code></strong></p>
 <p>切換到建立好的網站資料夾底下</p>
 <p>下載指令</p>
 <pre><code class="language-git" data-lang="git">cd wibside
@@ -253,12 +259,43 @@ git submodule add https://github.com/liuzc/LeaveIt.git
 <p>網頁上輸入：<code>http://localhost:1313/</code></p>
 <p>此時你就會發現你的網頁已經啟動了</p>
 <h2 id="五資料夾結構">五.資料夾結構</h2>
-<h2 id="六部屬">六.部屬</h2>
+<ul>
+<li>content 文章、頁面</li>
+<li>static 圖片、影片之類的</li>
+<li>themes 主題</li>
+<li>data 讓頁面讀取資料，如json檔</li>
+<li>layouts 修改主題的地方</li>
+</ul>
+<p>詳細內容請參考<a href="https://gohugo.io/content-management/organization/">官方檔案</a></p>
+<h2 id="六建立文章">六.建立文章</h2>
+<p>文章建立指令：<code>hugo new content\zh\文章名稱.md</code></p>
+<h3 id="1文章默認語法">1.文章默認語法</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: 文章名稱
+date: 日期 ex:2020-07-07
+draft: 草稿 ex:true/false
+author: 作者名稱
+description: 描述內容
+url: /自訂網址
+image: /圖片
+categories: 設定分類 ex:[&#34;abc&#34;,&#34;edf&#34;]
+tags: 設定tag標籤 ex:[&#34;abc&#34;,&#34;def&#34;]
+
+---
+</code></pre></div><p>這些設定都會在文章生成後自動產生，不必在複製貼上，有需也可以加上自己想要的內容。</p>
+<h3 id="2圖片放置位置">2.圖片放置位置</h3>
+<p>素材需放在static資料夾內</p>
+<p>static/images</p>
+<p>圖片網址會是<a href="http://localhost:1313/images/abc.jpg">http://localhost:1313/images/abc.jpg</a></p>
+<p>圖片也可使用url的方式。</p>
+<p><a href="https://yang-lin94.github.io/2020/free-image-space-imgur/" title="圖片雲端空間">imgur 免費圖片空間 註冊&amp;教學</a></p>
+<h2 id="七部屬">七.部屬</h2>
 <p>當網站完成後，產生靜態檔案到<code>public</code>資料夾下並部屬到遠端主機上。</p>
 <p>各平台部署方式<a href="https://gohugo.io/hosting-and-deployment/">參考</a>。</p>
-<h2 id="七相關文章">七.相關文章</h2>
+<h2 id="八相關文章">八.相關文章</h2>
 <ul>
 <li><a href="/2020/hugo-likecoin/">Hugo使用Likecoin教學</a></li>
+<li><a href="https://yang-lin94.github.io/2020/free-image-space-imgur/">imgur 免費圖片空間 註冊&amp;教學</a></li>
 </ul>
 
           <iframe class="LikeCoin" height="235" src="https://button.like.co/in/embed/cason_yang/button?referrer=https%3a%2f%2fyang-lin94.github.io%2f2020%2fhugo-webside%2f" width="100%" frameborder=0></iframe>
