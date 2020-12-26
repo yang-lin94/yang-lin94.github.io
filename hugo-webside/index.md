@@ -145,9 +145,9 @@ static/images
 
 ## 八.相關文章
 
-- [Hugo 使用 Likecoin 教學]()
+- [Hugo 使用 Likecoin 教學](https://yang-lin94.github.io/hugo-likecoin/)
 
-- [imgur 免費圖片空間 註冊&教學]()
+- [imgur 免費圖片空間 註冊&教學](https://yang-lin94.github.io/free-image-space-imgur/)
 
-<iframe class="LikeCoin" height="235" src="https://button.like.co/in/embed/cason_yang/button?referrer={url}" width="100%" frameborder=0></iframe>
+<iframe class="LikeCoin" height="235" src="https://button.like.co/in/embed/cason_yang/button?referrer=https://yang-lin94.github.io/hugo-webside/" width="100%" frameborder=0></iframe>
 
