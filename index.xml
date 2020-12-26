@@ -1,44 +1,37 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Cason&#39;s Blog on Cason&#39;s Blog</title>
-    <link>https://yang-lin94.github.io/</link>
-    <description>Recent content in Cason&#39;s Blog on Cason&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-TW</language>
-    <lastBuildDate>Fri, 04 Sep 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Posts</title>
-      <link>https://yang-lin94.github.io/posts/</link>
-      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://yang-lin94.github.io/posts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://yang-lin94.github.io/about/</link>
-      <pubDate>Thu, 04 Sep 2003 00:00:00 +0000</pubDate>
-      
-      <guid>https://yang-lin94.github.io/about/</guid>
-      <description>&lt;h2 id=&#34;關於我&#34;&gt;關於我&lt;/h2&gt;
-&lt;p&gt;本名&lt;strong&gt;楊林凱丞&lt;/strong&gt;，我習慣用我的英文名子Cason稱呼，目前就讀三民高中，國中因為&lt;strong&gt;Scratch&lt;/strong&gt;的關係開始接觸程式，就有了濃厚的興趣，國三想學進階的程式開始接觸&lt;strong&gt;Python&lt;/strong&gt;，現在主要是寫些文章和寫程式讓更多人看見。&lt;/p&gt;
-&lt;h2 id=&#34;聯絡方式&#34;&gt;聯絡方式&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/yanglin0904&#34;&gt;telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;mailto:casongg@gmail.com&#34;&gt;email&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yang-lin94&#34;&gt;github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.instagram.com/cason_0904/&#34;&gt;instagram&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;其他平台&#34;&gt;其他平台&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com/@casongg&#34;&gt;Medium&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://matters.news/@cason_yang&#34;&gt;Matters&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Cason&#39;s Blog</title>
+        <link>https://yang-lin94.github.io/</link>
+        <description>關於 LoveIt 主題</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>casongg@gmail.com (Cason Yang)</managingEditor>
+            <webMaster>casongg@gmail.com (Cason Yang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 04 Sep 2020 00:00:00 &#43;0000</lastBuildDate>
+            <atom:link href="https://yang-lin94.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>imgur 免費圖片空間 註冊&amp;教學</title>
+    <link>https://yang-lin94.github.io/free-image-space-imgur/</link>
+    <pubDate>Fri, 04 Sep 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://yang-lin94.github.io/free-image-space-imgur/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://i.imgur.com/MlMRWWY.png" referrerpolicy="no-referrer">
+            </div>一.imgur 是什麽 imgur 提供免費的圖片儲存空間，2009 年成立並提供圖片的存取服務，由於操作簡單、系統穩定、使用限制少，深受眾多用戶喜愛，現今]]></description>
+</item><item>
+    <title>Hugo使用Likecoin教學</title>
+    <link>https://yang-lin94.github.io/hugo-likecoin/</link>
+    <pubDate>Thu, 23 Jul 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://yang-lin94.github.io/hugo-likecoin/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://i.imgur.com/i2NLjMM.png" referrerpolicy="no-referrer">
+            </div>一.什麼是 Likecoin Likecoin 是什麼? 它是它是一種虛擬貨幣，是以太坊區域鍊延伸出來的，透過點讚，轉化成優質創作者的實質贊助，並且擁有去中心化的特性。 去中心化]]></description>
+</item><item>
+    <title>Hugo建立部落格/網站</title>
+    <link>https://yang-lin94.github.io/hugo-webside/</link>
+    <pubDate>Tue, 07 Jul 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://yang-lin94.github.io/hugo-webside/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://i.imgur.com/OzTCuYT.png" referrerpolicy="no-referrer">
+            </div>-- 一.Hugo 是什麼 Hugo 是用 go 語言開發的靜態網站的生產器 (Static Site Generator)，有快速的架站速度和高靈活性。 二.安裝 Hugo 有很多安裝方式，有 Wi]]></description>
+</item></channel>
 </rss>

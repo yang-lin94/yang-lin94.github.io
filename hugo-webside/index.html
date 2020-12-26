@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Hugo建立部落格/網站 - Cason&#39;s Blog</title><meta name="Description" content="Hugo是用go語言開發的靜態網站的生產器."><meta property="og:title" content="Hugo建立部落格/網站" />
+<meta property="og:description" content="Hugo是用go語言開發的靜態網站的生產器." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yang-lin94.github.io/hugo-webside/" />
+<meta property="og:image" content="https://yang-lin94.github.io/logo.png"/>
+<meta property="article:published_time" content="2020-07-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-07-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://yang-lin94.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Hugo建立部落格/網站"/>
+<meta name="twitter:description" content="Hugo是用go語言開發的靜態網站的生產器."/>
+<meta name="application-name" content="Cason&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Cason&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://yang-lin94.github.io/hugo-webside/" /><link rel="next" href="https://yang-lin94.github.io/hugo-likecoin/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon_io/site.webmanifest">
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Hugo建立部落格/網站",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/yang-lin94.github.io\/hugo-webside\/"
+        },"genre": "posts","keywords": "hugo, webside, blog","wordcount":  896 ,
+        "url": "https:\/\/yang-lin94.github.io\/hugo-webside\/","datePublished": "2020-07-07T00:00:00+00:00","dateModified": "2020-07-07T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Cason Yang","logo": "https:\/\/yang-lin94.github.io\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Cason Yang"
+            },"description": "Hugo是用go語言開發的靜態網站的生產器."
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Cason&#39;s Blog"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Cason&#39;s Bolg</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 標籤 </a><a class="menu-item" href="/categories/"> 分類 </a><a class="menu-item" href="/about/"> 關於 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/hugo-webside/" selected>繁體中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章標題或內容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Cason&#39;s Blog"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>Cason&#39;s Bolg</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章標題或內容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">標籤</a><a class="menu-item" href="/categories/" title="">分類</a><a class="menu-item" href="/about/" title="">關於</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/hugo-webside/" selected>繁體中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目錄</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Hugo建立部落格/網站</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://yang-lin94.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Cason Yang</a></span>&nbsp;<span class="post-category">收入於 <a href="/categories/%E6%95%99%E5%AD%B8/"><i class="far fa-folder fa-fw"></i>教學</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-07-07">2020-07-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 896 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;預計閱讀 2 分鐘&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://i.imgur.com/OzTCuYT.png"
+        data-srcset="https://i.imgur.com/OzTCuYT.png, https://i.imgur.com/OzTCuYT.png 1.5x, https://i.imgur.com/OzTCuYT.png 2x"
+        data-sizes="auto"
+        alt="https://i.imgur.com/OzTCuYT.png"
+        title="Hugo是用go語言開發的靜態網站的生產器." /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目錄</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#一hugo-是什麼">一.Hugo 是什麼</a></li>
+    <li><a href="#二安裝">二.安裝</a>
+      <ul>
+        <li><a href="#1scoop-windows">1.Scoop (Windows)</a></li>
+        <li><a href="#2homebrew-macos">2.Homebrew (macOS)</a></li>
+        <li><a href="#3透過-github-release-下載">3.透過 github release 下載</a></li>
+        <li><a href="#4環境變數">4.環境變數</a></li>
+        <li><a href="#5安裝確認">5.安裝確認</a></li>
+        <li><a href="#6建立網站">6.建立網站</a></li>
+      </ul>
+    </li>
+    <li><a href="#三選擇主題">三.選擇主題</a>
+      <ul>
+        <li><a href="#1下載主題">1.下載主題</a></li>
+        <li><a href="#2編輯-configtoml-將主題設為-leaveit">2.編輯 config.toml 將主題設為 LeaveIt</a></li>
+      </ul>
+    </li>
+    <li><a href="#四啟動-hugo-網頁">四.啟動 Hugo 網頁</a></li>
+    <li><a href="#五資料夾結構">五.資料夾結構</a></li>
+    <li><a href="#六建立文章">六.建立文章</a></li>
+    <li><a href="#1文章默認語法">1.文章默認語法</a>
+      <ul>
+        <li><a href="#2圖片放置位置">2.圖片放置位置</a></li>
+      </ul>
+    </li>
+    <li><a href="#七部屬">七.部屬</a></li>
+    <li><a href="#八相關文章">八.相關文章</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><!-- <a href="https://imgur.com/OzTCuYT"><img src="https://i.imgur.com/OzTCuYT.png" title="source: imgur.com" /></a> -->
+<h2 id="一hugo-是什麼">一.Hugo 是什麼</h2>
+<blockquote>
+<p>Hugo 是用 go 語言開發的靜態網站的生產器 (Static Site Generator)，有快速的架站速度和高靈活性。</p>
+</blockquote>
+<h2 id="二安裝">二.安裝</h2>
+<p>Hugo 有很多安裝方式，有 Windows/macOS/Linux，這裡主要介紹 Window 和 macOS 的安裝方法，其他安裝方法請直接到<a href="https://gohugo.io/getting-started/installing" target="_blank" rel="noopener noreffer">官網</a>查詢。</p>
+<h3 id="1scoop-windows">1.Scoop (Windows)</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cmd" data-lang="cmd">scoop install hugo
+scoop install hugo-extended
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="2homebrew-macos">2.Homebrew (macOS)</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">brew install hugo
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="3透過-github-release-下載">3.透過 github release 下載</h3>
+<p>下在網站的 <a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreffer">release</a> 選擇自己電腦的最新版本，例如:<strong>hugo_0.76.5_Windows-64bit.zip</strong>下載解壓縮，建立 Blog 的資料夾，將 hugo.exe 放入目錄中</p>
+<h3 id="4環境變數">4.環境變數</h3>
+<p>啟動環境變數</p>
+<p>快捷鍵：<code>win + R</code></p>
+<p>輸入：<code>rundll32.exe sysdm.cpl,EditEnvironmentVariables</code></p>
+<p>對 PATH 編輯，新增 &gt; 輸入 <code>hugo.exe</code> 所在的目錄 &gt; 確定</p>
+<h3 id="5安裝確認">5.安裝確認</h3>
+<p>開啟命列提示字元 CMD</p>
+<p>快捷鍵：<code>win + R</code></p>
+<p>輸入 <code>hugo version</code></p>
+<p>如有顯示版本代表安裝成功</p>
+<h3 id="6建立網站">6.建立網站</h3>
+<p>hugo new site 資料夾名稱
+這樣就完成一個簡單的 hugo 網頁啦。</p>
+<h2 id="三選擇主題">三.選擇主題</h2>
+<h3 id="1下載主題">1.下載主題</h3>
+<p>本人使用 LeaveIt hugo 的主題。</p>
+<p>Hugo 沒有預設主題需到<a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer">官網 Themes</a> 下載。</p>
+<p>使用 <code>git clone</code> 下載</p>
+<p>切換到建立好的網站資料夾底下</p>
+<p>下載指令</p>
+<p>cd wibside
+git init
+git submodule add <a href="https://github.com/liuzc/LeaveIt.git">https://github.com/liuzc/LeaveIt.git</a>
+沒有也沒關係，下載 <a href="https://github.com/liuzc/LeaveIt/archive/master.zip" target="_blank" rel="noopener noreffer">LeaveIt Themes</a> 後解壓縮。</p>
+<p>到 <strong>themes\LeaveIt</strong>，刪除.git 隱藏資料夾</p>
+<p>開啟隱藏項目,打勾 隱藏的項目</p>
+<p>將 <strong>LeaveIt/exampleSite</strong> 內的資料複製到根目錄資料夾</p>
+<p>根目錄資料夾的 <code>config.toml</code> 蓋掉掉</p>
+<p>注意：config 資料夾為設定檔</p>
+<h3 id="2編輯-configtoml-將主題設為-leaveit">2.編輯 config.toml 將主題設為 LeaveIt</h3>
+<p>開啟 config.toml 輸入</p>
+<p><code>theme = &quot;LeaveIt&quot;</code></p>
+<h2 id="四啟動-hugo-網頁">四.啟動 Hugo 網頁</h2>
+<p>需再根目錄執行 <code>hugo server -D</code></p>
+<p>網頁上輸入：<a href="http://localhost:1313/">http://localhost:1313/</a></p>
+<p>此時你就會發現你的網頁已經啟動了</p>
+<h2 id="五資料夾結構">五.資料夾結構</h2>
+<p>content 文章、頁面
+static 圖片、影片之類的
+themes 主題
+data 讓頁面讀取資料，如 json 檔
+layouts 修改主題的地方
+詳細內容請參考<a href="https://gohugo.io/content-management/organization/" target="_blank" rel="noopener noreffer">官方檔案</a></p>
+<h2 id="六建立文章">六.建立文章</h2>
+<p>文章建立指令：<strong>hugo new content\zh\文章名稱.md</strong></p>
+<h2 id="1文章默認語法">1.文章默認語法</h2>
+<p>title: 文章名稱
+date: 日期 ex:2020-07-07
+draft: 草稿 ex:true/false
+author: 作者名稱
+description: 描述內容
+url: /自訂網址
+image: /圖片
+categories: 設定分類 ex:[&ldquo;abc&rdquo;,&ldquo;edf&rdquo;]
+tags: 設定 tag 標籤 ex:[&ldquo;abc&rdquo;,&ldquo;def&rdquo;]</p>
+<hr>
+<p>這些設定都會在文章生成後自動產生，不必在複製貼上，有需也可以加上自己想要的內容。</p>
+<h3 id="2圖片放置位置">2.圖片放置位置</h3>
+<p>素材需放在 static 資料夾內</p>
+<p>static/images</p>
+<p>圖片網址會是 <a href="http://localhost:1313/images/abc.jpg">http://localhost:1313/images/abc.jpg</a></p>
+<p>圖片也可使用 url 的方式。</p>
+<p><a href="" rel="">imgur 免費圖片空間 註冊&amp;教學</a></p>
+<h2 id="七部屬">七.部屬</h2>
+<p>當網站完成後，產生靜態檔案到 <code>public</code> 資料夾下並部屬到遠端主機上。</p>
+<p>各平台部署方式<a href="https://gohugo.io/hosting-and-deployment/" target="_blank" rel="noopener noreffer">參考</a>。</p>
+<h2 id="八相關文章">八.相關文章</h2>
+<ul>
+<li>
+<p><a href="" rel="">Hugo 使用 Likecoin 教學</a></p>
+</li>
+<li>
+<p><a href="" rel="">imgur 免費圖片空間 註冊&amp;教學</a></p>
+</li>
+</ul>
+<iframe class="LikeCoin" height="235" src="https://button.like.co/in/embed/cason_yang/button?referrer={url}" width="100%" frameborder=0></iframe>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新於 2020-07-07</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/hugo-webside/index.md" target="_blank">閱讀原始文檔</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://yang-lin94.github.io/hugo-webside/" data-title="Hugo建立部落格/網站" data-hashtags="hugo,webside,blog"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://yang-lin94.github.io/hugo-webside/" data-hashtag="hugo"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://yang-lin94.github.io/hugo-webside/" data-title="Hugo建立部落格/網站" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://yang-lin94.github.io/hugo-webside/" data-title="Hugo建立部落格/網站"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">hugo</a>,&nbsp;<a href="/tags/webside/">webside</a>,&nbsp;<a href="/tags/blog/">blog</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主頁</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/hugo-likecoin/" class="next" rel="next" title="Hugo使用Likecoin教學">Hugo使用Likecoin教學<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://yang-lin94.github.io" target="_blank">Cason Yang</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到頂部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看評論">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"複製到剪貼板","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"algoliaAppID":"PLYEUGNRGA","algoliaIndex":"index.zh-cn","algoliaSearchKey":"86151f4c17195c1064fba71033605a8b","highlightTag":"em","maxResultLength":10,"noResultsFound":"沒有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
