@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>likecoin - 標籤 - Cason&#39;s Blog</title>
+        <title>likecoin - 标签 - Cason&#39;s Blog</title>
         <link>https://yang-lin94.github.io/tags/likecoin/</link>
-        <description>likecoin - 標籤 - Cason&#39;s Blog</description>
+        <description>likecoin - 标签 - Cason&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>casongg@gmail.com (Cason Yang)</managingEditor>
             <webMaster>casongg@gmail.com (Cason Yang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 23 Jul 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://yang-lin94.github.io/tags/likecoin/" rel="self" type="application/rss+xml" /><item>
     <title>Hugo使用Likecoin教學</title>
