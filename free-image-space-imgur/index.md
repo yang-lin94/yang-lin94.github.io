@@ -17,11 +17,11 @@
 
 點選右上角的「Sign up」註冊帳號。
 
-￼
+![註冊帳號](https://i.imgur.com/tWoUtCS.png "註冊帳號")
 
 將使用者資料填入註冊表單上，輸入完成後點選「Next」。
 
-￼
+![註冊表單](https://i.imgur.com/aqkCziY.png "註冊表單")
 也可以使用 Twitter、Google、Facebook、Apple 或 Yahoo! 帳戶來快速登錄
 
 ```markbown
@@ -33,33 +33,34 @@ Phone Number：電話號碼
 接著點選驗證，然後點選「Register」就完成囉。
 ```
 
-￼
+![驗證](https://i.imgur.com/RPAW10C.png "點選驗證")
 
 ## 三.使用方法
 
 ### 1.上傳
 
-註冊完畢之後，在右上角的帳號的下拉選單內點選「images」。￼
+註冊完畢之後，在右上角的帳號的下拉選單內點選「images」。
+![點選「images」](https://i.imgur.com/d8kGAAs.png "點選「images")
 
-￼
+![點選「images](https://i.imgur.com/VXtKQ44.png "點選「images")
 
 點選「Add images」。
 
-￼
+![Add images](https://i.imgur.com/cRzpXXq.png "Add images")
 
 點選「Browse」選擇上傳圖片，或將圖片拖拉進框框內。
 
-￼
+![上傳圖片](https://i.imgur.com/eSpCbrg.png "上傳圖片")
 
 ### 2.使用 imgur 當 blog 圖床
 
 依上步驟將圖片儲存在 imgur 後，點選圖片。
 
-￼
+![點選圖片](https://i.imgur.com/pjeI5GQ.png "點選圖片")
 
 點選自身 blog 網頁所使用的語言。
 
-￼
+![選擇網頁所使用的語言](https://i.imgur.com/voGfkBe.png "選擇網頁所使用的語言")
 
 本網站使用 hugo 架設 參考:[Hugo 建立部落格/網站](https://yang-lin94.github.io/hugo-webside/)
 

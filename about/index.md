@@ -9,7 +9,7 @@
 
 [telegram](https://t.me/yanglin0904)
 
-[email](casongg@gmail.com)
+[email](mailto:casongg@gmail.com)
 
 [github](https://github.com/yang-lin94)
 
