@@ -135,7 +135,7 @@ static/images
 
 圖片也可使用 url 的方式。
 
-[imgur 免費圖片空間 註冊&教學]()
+[imgur 免費圖片空間 註冊&教學](https://yang-lin94.github.io/free-image-space-imgur/)
 
 ## 七.部屬
 
@@ -148,6 +148,4 @@ static/images
 - [Hugo 使用 Likecoin 教學](https://yang-lin94.github.io/hugo-likecoin/)
 
 - [imgur 免費圖片空間 註冊&教學](https://yang-lin94.github.io/free-image-space-imgur/)
-
-<iframe class="LikeCoin" height="235" src="https://button.like.co/in/embed/cason_yang/button?referrer=https://yang-lin94.github.io/hugo-webside/" width="100%" frameborder=0></iframe>
 

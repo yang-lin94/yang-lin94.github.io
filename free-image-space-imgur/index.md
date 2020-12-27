@@ -64,5 +64,3 @@ Phone Number：電話號碼
 
 本網站使用 hugo 架設 參考:[Hugo 建立部落格/網站](https://yang-lin94.github.io/hugo-webside/)
 
-<iframe class="LikeCoin" height="235" src="https://button.like.co/in/embed/cason_yang/button?referrer=https://yang-lin94.github.io/free-image-space-imgur/" width="100%" frameborder=0></iframe>
-

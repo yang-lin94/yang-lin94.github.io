@@ -43,5 +43,3 @@ Hugo 可以透過自訂 layouts 的方式，再不改變網頁原先的設計，
 
 [Hugo 建立部落格/網站](https://yang-lin94.github.io/hugo-webside/)
 
-<iframe class="LikeCoin" height="235" src="https://button.like.co/in/embed/cason_yang/button?referrer=https://yang-lin94.github.io/hugo-likecoin/" width="100%" frameborder=0></iframe>
-
